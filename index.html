@@ -12,6 +12,13 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <!-- js -->
@@ -50,8 +57,80 @@
   <body>
     <div class="wrap">
       <!-- ssum area -->
-      <header></header>
-      <section class="visual"></section>
+      <header class="header">
+        <!-- logo + top menu -->
+        <div class="top-nav">
+          <!-- top menu left-->
+          <nav class="top-nav-left">
+            <!-- logo -->
+            <div class="logo">
+              <img src="images/repose_logo.svg" alt="레포제 로고" />
+            </div>
+            <ul class="left-depth1">
+              <li>
+                <a href="#">About Reposé</a>
+              </li>
+              <li>
+                <a href="#">Collection</a>
+              </li>
+              <li>
+                <a href="#">shop</a>
+              </li>
+              <li>
+                <a href="#">Community</a>
+              </li>
+              <li>
+                <a href="#">Customer Service</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- top menu right -->
+          <nav class="top-nav-right">
+            <ul class="right-depth1">
+              <li>
+                <a href="#"><img src="images/btn_cart.svg" alt="장바구니" /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="images/btn_mypage.svg" alt="마이페이지"
+                /></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/btn_search.svg" alt="검색" /></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- visual area -->
+      <section class="visual">
+        <div class="swiper mainVisual">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="visual-box vs-bg1">
+                <a href="#" class="inner">
+                  <p>Reposé tvc 2024</p>
+                  <p>2024 TV광고 ON AIR Life ON REPOS 퀴즈이벤트</p>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="visual-box vs-bg2">
+                <a href="#" class="inner">
+                  <p>BESPOKE WEDDING CLUB</p>
+                  <p>삼성전자 비스포크<br/>
+                    웨딩클럽 스페셜 혜택
+                  </p>
+                  <p>with Reposé</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
       <section class="quick_menu"></section>
       <section class="about_repose"></section>
       <section class="collection"></section>
