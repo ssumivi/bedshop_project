@@ -15,20 +15,26 @@ window.addEventListener("load", function () {
       header.classList.remove("active");
       rightDepth1.classList.remove("active");
     }
-  });
-  //    스와이퍼
-  var swiper = new Swiper(".repos-img", {
-    slidesPerView:3,
-    // spaceBetween: 30,
-    centeredSlides: true,
-    loop: true,
-    scrollbar: {
-        el: ".repos-img .swiper-scrollbar",
-      },
-    navigation: {
-      nextEl: ".repos-img .swiper-button-next",
-      prevEl: ".repos-img .swiper-button-prev",
+
+   })
+   //visual slide
+   var swiper = new Swiper(".mainVisual", {
+    loop : true,
+    // autoplay: true,
+    delay: 5000, 
+    speed: 1000,
+    pagination: {
+      el: ".mainPaginationNum",
+      type: "fraction",
     },
-    
+    scrollbar: {
+      el: ".mainScrollBar",
+    },
+    navigation: {
+      nextEl: ".mainNbtn",
+      prevEl: ".mainPbtn",
+    },
   });
-});
+})
+=======
+ 
