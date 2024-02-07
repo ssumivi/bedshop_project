@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url("font.css");
 @font-face {
   font-family: "Pretendard-Regular";
   src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
@@ -114,7 +115,11 @@ img {
   align-items: center;
   gap: 4rem;
   font-size: 1.8rem;
+
   transition: all 0.5s ease-out;
+
+=======
+
 }
 .left-depth1 li a {
   color: #fff;
@@ -337,6 +342,10 @@ img {
 }
 /* 채은 영역 */
 
+
+=======
+/* 신규가입혜택, 리뷰이벤트 영역 */
+
 .sign-up {
   display: flex;
   /* margin: 0 auto;
@@ -355,37 +364,16 @@ img {
   text-decoration: none;
 }
 .bt1 {
-  margin-left: 20px;
+  margin-left: 50px;
   margin-top: 30px;
-}
-.sign-up-p {
-  font-size: 19px;
-  color: rgb(0, 0, 0, 0.4);
-  font-weight: 100px;
-  margin-left: 40px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-.sign-up ul li a h1 {
-  font-size: 26px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  margin-left: 20px;
-}
-.sign-up-p2 {
-  font-size: 13px;
-  margin-left: 20px;
-}
-
-.sign-up button {
-  font-size: 14px;
+  font-size: 18px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   gap: 10px;
   position: relative;
-  width: 220px;
-  height: 40px;
+  width: 250px;
+  height: 50px;
   padding: 0 10px;
   color: rgb(0, 0, 0, 0.7);
   background-color: transparent;
@@ -393,10 +381,25 @@ img {
   border: 0;
   border: 1.5px solid rgba(0, 0, 0, 0.4);
 }
-.sign-up button img {
-  width: 18px;
-  height: 18px;
+.sign-up-p {
+  font-size: 17px;
+  color: rgb(0, 0, 0, 0.4);
+  font-weight: 100px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  margin-top: 50px;
 }
+.sign-up-h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-left: 50px;
+}
+.sign-up-p2 {
+  font-size: 17px;
+  margin-left: 50px;
+}
+
 
 .sign-up > li {
   position: relative;
@@ -412,7 +415,7 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: aquamarine;
+
 }
 .review {
   margin: 0 auto;
@@ -420,12 +423,14 @@ img {
   padding-top: 50px;
 }
 .review-p {
-  font-size: 13px;
+
+  font-size: 17px;
+
   color: rgb(0, 0, 0, 0.4);
   font-weight: 100px;
-  margin-left: 20px;
+  margin-left: 50px;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 .review ul {
   list-style: none;
@@ -436,8 +441,22 @@ img {
   text-decoration: none;
 }
 .bt2 {
-  margin-left: 20px;
+  margin-left: 50px;
   margin-top: 30px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  width: 250px;
+  height: 50px;
+  padding: 0 10px;
+  color: rgb(0, 0, 0, 0.7);
+  background-color: transparent;
+  left: 0;
+  border: 0;
+  border: 1.5px solid rgba(0, 0, 0, 0.4);
 }
 
 .review ul li a h1 {
@@ -447,8 +466,18 @@ img {
   margin-left: 20px;
 }
 .review-p2 {
-  font-size: 13px;
-  margin-left: 20px;
+  font-size: 17px;
+  margin-left: 50px;
+}
+.review-h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-left: 50px;
+}
+.bt2 img {
+  width: 20px;
+  height: 20px;
 }
 
 .review button {
@@ -486,4 +515,105 @@ img {
   background-size: cover;
   width: 710px;
   height: 266.25px;
+}
+/* reposproduct*/
+.product {
+  position: relative;
+}
+/* 공통으로쓰는거 */
+.shop {
+  font-size: 20px;
+  font-family: "timesroman";
+  font-style: italic;
+}
+.sp-2 {
+  font-family: "Pretendard-Regular";
+  font-style: normal;
+  font-size: 20px;
+}
+.bar {
+  width: 8rem;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 6px;
+  margin-left: 3px;
+}
+
+.repos-h1 {
+  font-size: 90px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.repos-h1 span {
+  font-family: "timesroman";
+  font-style: italic;
+}
+.repos inner img {
+  width: 467px;
+  height: 570px;
+  margin-bottom: 20px;
+  display: block;
+}
+.swiper-wrapper img{
+   width: 467px;
+  height: 570px;
+  margin-bottom: 10px;
+  display: block; 
+} 
+.swiper-wrapper {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 25px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.pp2 {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.pp3 > span {
+  color: #456dae;
+}
+.s1 {
+  color: rgba(0, 0, 0, 0.4);
+}
+.repos-li2 span {
+  color: #456dae;
+}
+
+.f1 {
+  color: rgba(0, 0, 0, 0.4);
+}
+.repos-li3 span {
+  color: #456dae;
+}
+.f2 {
+  color: rgba(0, 0, 0, 0.4);
+}
+.repos-li4 span {
+  color: #456dae;
+}
+.f3 {
+  color: rgba(0, 0, 0, 0.4);
+}
+.repos-li5 span {
+  color: #456dae;
+}
+.next-btn {
+  color: rgba(255, 255, 255, 0.5);
+  width: 50px;
+  height: 50px;
+}
+.prev-btn {
+  color: rgba(255, 255, 255, 0.5);
+  width: 50px;
+  height: 50px;
+}
+.s-scroll {
+  position: absolute;
 }
