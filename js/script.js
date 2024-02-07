@@ -16,4 +16,22 @@ window.addEventListener("load", function(){
         rightDepth1.classList.remove("active")
     }
    })
+   //visual slide
+   var swiper = new Swiper(".mainVisual", {
+    loop : true,
+    // autoplay: true,
+    delay: 5000, 
+    speed: 1000,
+    pagination: {
+      el: ".mainPaginationNum",
+      type: "fraction",
+    },
+    scrollbar: {
+      el: ".mainScrollBar",
+    },
+    navigation: {
+      nextEl: ".mainNbtn",
+      prevEl: ".mainPbtn",
+    },
+  });
 })
