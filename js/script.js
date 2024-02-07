@@ -35,5 +35,16 @@ window.addEventListener("load", function () {
       prevEl: ".mainPbtn",
     },
   });
+  var swiper = new Swiper(".repos-img", {
+    loop : true,
+    slidesPerView: 3,
+    scrollbar: {
+      el: ".mainScrollBar",
+    },
+    navigation: {
+      nextEl: ".next-btn",
+      prevEl: ".prev-btn",
+    },
+  });
 })
  
