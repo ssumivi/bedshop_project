@@ -36,5 +36,4 @@ window.addEventListener("load", function () {
     },
   });
 })
-=======
  
