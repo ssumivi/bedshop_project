@@ -22,9 +22,9 @@ AOS.init();
    //visual slide
    var swiper = new Swiper(".mainVisual", {
     loop : true,
-    // autoplay: true,
+    autoplay: true,
     delay: 5000, 
-    speed: 1000,
+    speed: 1500,
     pagination: {
       el: ".mainPaginationNum",
       type: "fraction",
@@ -42,7 +42,7 @@ AOS.init();
     slidesPerView: 4,
     spaceBetween:7,
     scrollbar: {
-      el: ".mainScrollBar",
+      el: ".s-scroll",
     },
     navigation: {
       nextEl: ".next-btn",
