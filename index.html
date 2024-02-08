@@ -21,6 +21,8 @@
     />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <!-- aos acc -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- js -->
     <script src="js/html5shiv.js"></script>
     <!-- <script src="js/prefixfree.min.js"></script> -->
@@ -28,6 +30,11 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+
+
     <!-- seo -->
     <meta
       name="description"
@@ -284,8 +291,8 @@
             <p class="sign-up-p2">
               중복 사용 가능한 웰컴 쿠폰 10% 지급해드립니다.
             </p>
-            <button class="bt1">
-              View more <img src="images/Asset 1.png" alt="" />
+            <button class="bt2">
+              View more <img src="images/Asset1.png" alt="" />
             </button>
           </a>
         </li>
@@ -296,7 +303,7 @@
             <h1 class="review-h1">리뷰 작성 이벤트</h1>
             <p class="review-p2">리뷰 작성 시 적립금 + 사은품 지급!</p>
             <button class="bt2">
-              View more<img src="images/Asset 1.png" alt="" />
+              View more<img src="images/Asset1.png" alt="" />
             </button>
           </a>
         </li>
@@ -304,11 +311,15 @@
       <!-- repos product영역 -->
       <div class="repos inner">
         <div class="product">
+          <div class="number-bar" 
+          data-aos="fade-right"
+          data-aos-delay="300"
+            data-aos-duration="1000">
           <span class="shop">
-            03
+            03</span>
             <div class="bar"></div>
-            <span class="sp-2">Shop</span></span
-          >
+            <span class="sp-2">Shop</span>
+        </div>
           <h1 class="repos-h1">Repos <span>Product</span></h1>
           <div class="swiper repos-img">
             <ul class="swiper-wrapper">
@@ -368,12 +379,33 @@
                 <p>977,500원 <span>15%</span></p>
               </li>
             </ul>
-            <div class="swiper-button-next next-btn" ></div>
+            <div class="swiper-button-next next-btn"></div>
             <div class="swiper-button-prev prev-btn"></div>
             <div class="swiper-scrollbar s-scroll"></div>
           </div>
         </div>
       </div>
+    </div>
+    <!-- instagram 영역 -->
+    <div class="instagram-wrap inner">
+      <div class="insta-top">
+        <p>Follow us Instagram</p>
+        <span>@Repos.offical</span>
+      </div>
+      <div class="swiper insta-img">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/insta_1.png" alt=""></div>
+          <div class="swiper-slide"><img src="images/insta_2.png" alt=""></div>
+          <div class="swiper-slide"><img src="images/insta_3.png" alt=""></div>
+          <div class="swiper-slide"><img src="images/insta_4.png" alt=""></div>
+          <div class="swiper-slide"><img src="images/insta_5.png" alt=""></div>
+          <div class="swiper-slide"><img src="images/insta_6.png" alt=""></div>
+          <div class="swiper-slide"><img src="images/insta_7.png" alt=""></div>
+        </div>
+
+      </div>
+      
+      
     </div>
   </body>
 </html>
