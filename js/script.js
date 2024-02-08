@@ -20,9 +20,9 @@ window.addEventListener("load", function () {
    //visual slide
    var swiper = new Swiper(".mainVisual", {
     loop : true,
-    // autoplay: true,
+    autoplay: true,
     delay: 5000, 
-    speed: 1000,
+    speed: 1500,
     pagination: {
       el: ".mainPaginationNum",
       type: "fraction",
@@ -39,7 +39,7 @@ window.addEventListener("load", function () {
     loop : true,
     slidesPerView: 3,
     scrollbar: {
-      el: ".mainScrollBar",
+      el: ".s-scroll",
     },
     navigation: {
       nextEl: ".next-btn",
