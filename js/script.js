@@ -15,8 +15,10 @@ window.addEventListener("load", function () {
       header.classList.remove("active");
       rightDepth1.classList.remove("active");
     }
-
+//aos 추가
+AOS.init();
    })
+   
    //visual slide
    var swiper = new Swiper(".mainVisual", {
     loop : true,
@@ -37,7 +39,8 @@ window.addEventListener("load", function () {
   });
   var swiper = new Swiper(".repos-img", {
     loop : true,
-    slidesPerView: 3,
+    slidesPerView: 4,
+    spaceBetween:7,
     scrollbar: {
       el: ".mainScrollBar",
     },
@@ -46,5 +49,12 @@ window.addEventListener("load", function () {
       prevEl: ".prev-btn",
     },
   });
+  //  insta
+  var swiper = new Swiper(".insta-img", {
+    slidesPerView: 4,
+    spaceBetween: 4,
+    freeMode: true,
+  
+  });
 })
- 
+

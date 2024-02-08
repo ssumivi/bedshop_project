@@ -529,14 +529,14 @@ img {
   font-size: 20px;
 }
 .bar {
-  width: 8rem;
+  width: 7rem;
   height: 1px;
   background: rgba(0, 0, 0, 0.2);
   display: inline-block;
   text-align: center;
   align-items: center;
   margin-bottom: 6px;
-  margin-left: 3px;
+  margin-left: 4px; 
 }
 
 .repos-h1 {
@@ -548,24 +548,18 @@ img {
   font-family: "timesroman";
   font-style: italic;
 }
-.repos inner img {
-  width: 467px;
-  height: 570px;
-  margin-bottom: 20px;
-  display: block;
-}
+
 .swiper-wrapper img{
-   width: 467px;
-  height: 570px;
+   width: 320px;
+  height: 380px;
   margin-bottom: 10px;
   display: block; 
 } 
 .swiper-wrapper {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
-  line-height: 25px;
+  line-height: 22px;
   display: flex;
-  gap: 10px;
   margin-bottom: 20px;
 }
 
@@ -591,6 +585,7 @@ img {
 }
 .f2 {
   color: rgba(0, 0, 0, 0.4);
+  
 }
 .repos-li4 span {
   color: #456dae;
@@ -602,15 +597,19 @@ img {
   color: #456dae;
 }
 .next-btn {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 06);
   width: 50px;
   height: 50px;
+  top:48%
 }
 .prev-btn {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.6);
   width: 50px;
   height: 50px;
+  top:48%
 }
 .s-scroll {
-  position: absolute;
+  background-color: #456dae;
+  opacity:0.3;
 }
+
