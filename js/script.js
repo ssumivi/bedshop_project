@@ -51,8 +51,12 @@ AOS.init();
   });
   //  insta
   var swiper = new Swiper(".insta-img", {
-    slidesPerView: 4,
-    spaceBetween: 4,
+    loop : true,
+    autoplay: true,
+    delay: 800, 
+    speed: 1100,
+    slidesPerView: 6,
+    spaceBetween: 20,
     freeMode: true,
   
   });
