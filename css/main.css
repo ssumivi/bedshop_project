@@ -90,6 +90,7 @@ img {
 .header.active {
   background-color: rgba(255, 255, 255, 1);
   border-bottom: 1px solid rgba(223, 223, 223, 0.3);
+  transition: all .3s;
 }
 .header.active .top-nav-left a {
   color: #222;
@@ -177,7 +178,9 @@ img {
   text-align: center;
   line-height: 14px;
 }
-.right-depth1.active {
+.right-depth1-img.active, 
+.right-depth2-img.active,
+.right-depth3-img.active{
   filter: brightness(0.1);
 }
 /* visual */
@@ -357,33 +360,43 @@ img {
   height: 130px;
   border-radius: 50%;
   object-fit: cover;
-}
-.quick-img li .border {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 130px;
-  height: 130px;
-  border: 3px solid transparent;
-  border-radius: 50%;
-  pointer-events: none;
-}
-@keyframes lining {
-  0% {
-    transform: rotate(0deg) scale(0);
-  }
-  100% {
-    transform: rotate(-360deg) scale(1); /* 반시계 방향으로 회전합니다. */
-  }
+  transition: all .4s;
 }
 
-.quick-img li:hover .border {
-  border-color: red;
-  animation: lining 0.5s ease forwards;
+/* animation effect */
+.quick-img li:hover img{
+  filter: brightness(.3);
+
+}
+.quick-img li:hover span{
+  color: #456dae;
+}
+
+.quick-img .border{
+  position: absolute;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  font-size: 2.2rem;
+  color: #fff;
+  font-family: "timesroman";
+  opacity: 0;
+  transition: all .4s;
 }
 .quick-img li span {
   font-size: 1.6rem;
   text-align: center;
+}
+/* about repose */
+.about-imgchange li{
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-list-2,
+.about-list-3,
+.about-list-4{
+  opacity: 0;
 }
 /* 채은 영역 */
 /* 신규가입혜택, 리뷰이벤트 영역 */

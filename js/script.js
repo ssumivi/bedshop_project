@@ -1,6 +1,8 @@
 window.addEventListener("load", function () {
   const header = document.querySelector(".header");
-  const rightDepth1 = this.document.querySelector(".right-depth1");
+  const rightDepth1 = this.document.querySelector(".right-depth1-img");
+  const rightDepth2 = this.document.querySelector(".right-depth2-img");
+  const rightDepth3 = this.document.querySelector(".right-depth3-img");
   let scy = 0;
 
   window.addEventListener("scroll", function () {
@@ -11,9 +13,13 @@ window.addEventListener("load", function () {
     if (scy > 0) {
       header.classList.add("active");
       rightDepth1.classList.add("active");
+      rightDepth2.classList.add("active");
+      rightDepth3.classList.add("active");
     } else {
       header.classList.remove("active");
       rightDepth1.classList.remove("active");
+      rightDepth2.classList.remove("active");
+      rightDepth3.classList.remove("active");
     }
 //aos 추가
 AOS.init();
@@ -58,7 +64,6 @@ AOS.init();
     slidesPerView: 6,
     spaceBetween: 20,
     freeMode: true,
-  
   });
 })
 
