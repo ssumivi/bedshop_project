@@ -161,7 +161,7 @@ img {
   display: flex;
   gap: 1rem;
 }
-.right-depth1 li:first-of-type{
+.right-depth1 li:first-of-type {
   position: relative;
 }
 .cart {
@@ -341,24 +341,24 @@ img {
   font-size: 4.8rem;
 }
 /* quick menu */
-.quick-img{
+.quick-img {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.quick-img li{
+.quick-img li {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-.quick-img li a img{
+.quick-img li a img {
   width: 130px;
   height: 130px;
   border-radius: 50%;
   object-fit: cover;
 }
-.quick-img li .border{
+.quick-img li .border {
   position: absolute;
   top: 0;
   left: 0;
@@ -381,7 +381,7 @@ img {
   border-color: red;
   animation: lining 0.5s ease forwards;
 }
-.quick-img li span{
+.quick-img li span {
   font-size: 1.6rem;
   text-align: center;
 }
@@ -578,7 +578,7 @@ img {
   text-align: center;
   align-items: center;
   margin-bottom: 6px;
-  margin-left: 4px; 
+  margin-left: 4px;
 }
 
 .repos-h1 {
@@ -591,9 +591,8 @@ img {
   font-style: italic;
 }
 
-
-.swiper-wrapper img{
-   width: 320px;
+.swiper-wrapper img {
+  width: 320px;
   height: 380px;
   margin-bottom: 10px;
   display: block;
@@ -603,7 +602,7 @@ img {
   font-weight: bold;
   line-height: 22px;
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .pp2 {
@@ -628,7 +627,6 @@ img {
 }
 .f2 {
   color: rgba(0, 0, 0, 0.4);
-  
 }
 .repos-li4 span {
   color: #456dae;
@@ -643,16 +641,87 @@ img {
   color: rgba(255, 255, 255, 06);
   width: 50px;
   height: 50px;
-  top:48%
+  top: 48%;
 }
 .prev-btn {
   color: rgba(255, 255, 255, 0.6);
   width: 50px;
   height: 50px;
-  top:48%
+  top: 48%;
 }
 .s-scroll {
   background-color: #456dae;
-  opacity:0.3;
+  opacity: 0.3;
+}
+/* insta영역 */
+.instagram-wrap {
+  padding: 50 0px;
+  line-height: 40px;
+}
+.insta-top {
+  margin: 0 auto;
+  text-align: center;
+}
+.insta-top p {
+  font-size: 25px;
+  font-weight: bold;
+}
+.insta-top span {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.insta-top {
+  margin-bottom: 50px;
+}
+.insta-img .swiper-slide {
+  width: 100px;
+  height: 200px;
+  border-radius: 20%;
+  overflow: hidden;
+  position: relative;
+}
+.insta-img .swiper-slide img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+/*QNA영역 */
+.qna-wrap {
+  text-align: center;
+ margin: 50px;
+}
+.qna-top{
+  margin-bottom: 50px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.qna-bt {
+  font-size: 18px;
+}
+.qna-bt a{
+  color: #456dae;
+
+}
+.qna-bt ul{
+  width: 70%;
+  margin: 0 auto;
+}
+.qna-bt ul li a{
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding: 20px 0;
+}
+.qna-bt p{
+display: inline-block;
+
+}
+.qna-bt img{
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  /* margin-bottom: 50px; */
+  top: 0;
+  left: 0;
 }
 
