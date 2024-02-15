@@ -6,30 +6,26 @@ window.addEventListener("load", function () {
   let scy = 0;
 
   window.addEventListener("scroll", function () {
-    // 새로 고침 / url 입력해서 html 출력시
-    // 1.스크롤바의 픽셀 위치값을 파악해서
-    scy = this.document.documentElement.scrollTop;
-    // 2.class 적용 여부 결정
-    if (scy > 0) {
-      header.classList.add("active");
-      rightDepth1.classList.add("active");
-      rightDepth2.classList.add("active");
-      rightDepth3.classList.add("active");
-    } else {
-      header.classList.remove("active");
-      rightDepth1.classList.remove("active");
-      rightDepth2.classList.remove("active");
-      rightDepth3.classList.remove("active");
+    // 스크롤바의 픽셀 위치값을 파악
+    var scy = this.document.documentElement.scrollTop;
+    // class 적용 여부를 결정하는 요소들을 배열로 관리
+    var elements = [header, rightDepth1, rightDepth2, rightDepth3];
+    // 스크롤 위치에 따라 클래스 적용 여부를 결정하는 for 루프
+    for (var i = 0; i < elements.length; i++) {
+      if (scy > 0) {
+        elements[i].classList.add("active");
+      } else {
+        elements[i].classList.remove("active");
+      }
     }
-//aos 추가
-AOS.init();
-   })
-   
-   //visual slide
-   var swiper = new Swiper(".mainVisual", {
-    loop : true,
+  });
+  //aos 추가
+  AOS.init();
+  //visual slide
+  var swiper = new Swiper(".mainVisual", {
+    loop: true,
     autoplay: true,
-    delay: 5000, 
+    delay: 5000,
     speed: 1500,
     pagination: {
       el: ".mainPaginationNum",
@@ -43,10 +39,42 @@ AOS.init();
       prevEl: ".mainPbtn",
     },
   });
+  //about repose
+  //page가 처음 로드 되었을 때
+  document.addEventListener("DOMContentLoaded", function () {
+    // 페이지가 로드될 때 첫 번째 메뉴 항목에 대한 마우스 오버 이벤트를 수행
+    menus[0].dispatchEvent(new MouseEvent("mouseover"));
+  });
+
+  const menus = document.querySelectorAll(".about-repose .about-list li");
+  const aboutSlider = new Swiper(".about_slider", {
+    effect: "fade",
+    speed: 1000,
+    loop: false,
+    on: {
+      slideChange: function () {
+        const idx = this.realIndex;
+        for (let menu of menus) {
+          menu.classList.remove("act");
+        }
+        menus[idx].classList.add("act");
+      },
+    },
+  });
+  function getElementIndex(element) {
+    return Array.from(element.parentElement.children).indexOf(element);
+  }
+  // 메뉴 항목에 대한 이벤트 핸들러 설정
+  menus.forEach((menu, idx) => {
+    menu.addEventListener("mouseover", () => {
+      aboutSlider.slideTo(idx);
+    });
+  });
+  //repose product
   var swiper = new Swiper(".repos-img", {
-    loop : true,
+    loop: true,
     slidesPerView: 4,
-    spaceBetween:7,
+    spaceBetween: 7,
     scrollbar: {
       el: ".s-scroll",
     },
@@ -57,13 +85,12 @@ AOS.init();
   });
   //  insta
   var swiper = new Swiper(".insta-img", {
-    loop : true,
+    loop: true,
     autoplay: true,
-    delay: 800, 
+    delay: 800,
     speed: 1100,
     slidesPerView: 6,
     spaceBetween: 20,
     freeMode: true,
   });
-})
-
+});
