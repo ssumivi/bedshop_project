@@ -1,0 +1,31 @@
+diff a/index.html b/index.html	(rejected hunks)
+@@ -267,10 +267,25 @@
+                 <div class="img-box">
+                   <img src="images/quick1.png" alt="전체침대" />
+                 </div>
+-                <div class="hover"> 
+-                  <svg class="svg" viewBox="0 0 158 150">
+-                    <circle r="75" cx="75" cy="75" class="border"></circle>
+-                    <circle r="75" cx="75" cy="75" class="progress"></circle>
++                <div class="hover">
++                  <svg
++                    class="c3"
++                    xmlns="http://www.w3.org/2000/svg"
++                    width="144.543"
++                    height="144.543"
++                    viewBox="0 0 38.244 38.244"
++                  >
++                    <circle
++                      cx="55.098"
++                      cy="143.868"
++                      r="18.5"
++                      opacity=".98"
++                      fill="none"
++                      stroke="#456dae"
++                      stroke-width="1.4"
++                      stroke-linejoin="round"
++                      transform="translate(-35.976 -124.746)"
++                    />
+                   </svg>
+                 </div>
+               </a>
