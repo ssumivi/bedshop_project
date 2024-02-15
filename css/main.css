@@ -28,11 +28,12 @@ img {
 }
 /* 공통 클래스 */
 .inner {
-  max-width: 1530px;
+  max-width: 1430px;
   width: 100%;
   margin: 0 auto;
   padding: 50px 0;
 }
+
 /* ssum area */
 .header {
   position: fixed;
@@ -664,8 +665,8 @@ img {
 /* 신규가입혜택, 리뷰이벤트 영역 */
 .sign-up-wrap{
   width: 100%;
-  margin-bottom: 50px;
-
+  margin-bottom: 80px;
+  margin-top: -80px;
 }
 .sign-up {
   display: flex;
@@ -705,6 +706,18 @@ img {
   left: 0;
   border: 0;
   border: 1.5px solid rgba(0, 0, 0, 0.4);
+  
+}
+.bt2:hover{
+  background-color: #456dae;
+  border: 1px solid #456dae;
+  color: #fff;
+  transition: all .8s;
+
+}
+.bt2:hover .view-bt{
+  color: #fff;
+  filter: contrast(1) invert(1);
 }
 .sign-up-p {
   font-size: 17px;
@@ -780,7 +793,9 @@ img {
   left: 0;
   border: 0;
   border: 1.5px solid rgba(0, 0, 0, 0.4);
+  cursor: pointer;
 }
+
 
 .review ul li a h1 {
   font-size: 26px;
@@ -1045,42 +1060,54 @@ img {
   position: relative;
 }
 .footer-logo{
-  position: absolute;
-  width: 100%;
-  margin-left: 30px;
-  margin-top: 60px;
+ width: 15%;
+  padding-left: 50px;
+ padding-top: 40px;
 }
 .footer-logo img{
-  width: 180px;
+ width: 180px;
+}
+.footer-inner{
+display: flex;
+
 }
 .footer-inner2{
-
+  width: 80%;
+  /* padding: 20px; */
+  margin-top: 20px;
+ 
 }
 .korea-companywrap{
   color: #fff;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  /* padding: 20px; */
+  margin-left: 20px;
+ margin-right: 150px;
 }
+
 .korea-companywrap dt{
   font-size: 14px;
-  
+  margin-right: 7px;
   line-height: 20px;
+  opacity: 70%;
 }
 .korea-companywrap dd{
   font-size: 12px;
-  opacity: 70%;
+  opacity: 40%;
+  
 }
-.korea-company p{
-  font-size: 18px;
-  margin-bottom: 20px;
+.footer-inner2 > p{
+  font-size: 25px;
+  margin: 20px;
+  color: #fff;
+
 }
 .korea-company dl{
   display: flex;
   align-items: center;
 }
-.copyrighter{
-  color: #fff;
-}
+
 .korea-company3{
   position: relative;
 }
@@ -1094,11 +1121,15 @@ img {
 .korea-company3 ul{
   font-size: 14px;
 }
+.footer_bt li{
+  opacity: 70%;
+}
 .bt_num{
   font-size: 40px;
+  margin-top: 7px;
+  margin-bottom: 7px;
 }
 .bt-b{
-  opacity: 70%;
   line-height: 1.4;
 }
 .ft_img {
@@ -1106,10 +1137,12 @@ img {
   display: flex;
   align-items: center;
   gap: 20px;
+  margin-top: 7px;
+  
 }
 .ft-img li a img{
   padding-top:10px ;
-
+  cursor: pointer;
 }
 .ft_img li{
   border: 1px solid rgba(255,255,255,0.1);
@@ -1121,4 +1154,26 @@ img {
 }
 .facebook_bt img{
   padding-left: 5px;
+}
+.copyrighter{
+  color: #fff;
+  font-size: 12px;
+  padding: 20px ;
+}
+.korea-Company-li{
+  gap: 10px;
+  margin-bottom: 2px;
+  opacity: 70%;
+}
+.Copyrightc{
+  opacity: 40%;
+}
+.footer-bt P{
+  width: 100%;
+  height: 180px;
+  color: #fff;
+  font-size: 192px;
+  font-family: "timesroman";
+  opacity: 10%;
+  margin-top: 11.5px;
 }
