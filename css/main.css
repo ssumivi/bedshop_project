@@ -15,7 +15,6 @@
 html {
   font-size: 10px;
   font-family: "Pretendard-Regular";
-  height: 2000px;
 }
 a {
   text-decoration: none;
@@ -56,7 +55,7 @@ img {
   opacity: 0;
 }
 /* header hover */
-.header:hover {
+.header:hover{
   width: 100%;
   height: 65vh;
   min-height: 640px;
