@@ -97,6 +97,7 @@ img {
 }
 /* top menu */
 .top-nav {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -189,7 +190,7 @@ img {
   display: block;
   width: 100%;
   height: 100vh;
-  min-height: 920px;
+  min-height: 750px;
 }
 .swiper {
   width: 100%;
@@ -197,11 +198,11 @@ img {
 }
 .mainVisual {
   position: relative;
+  height: 100%;
 }
 .swiper-wrapper {
   width: 100%;
   height: 100%;
-  gap: 0;
 }
 .swiper-slide {
   width: 100%;
@@ -214,6 +215,9 @@ img {
 .vs-bg1 {
   width: 100%;
   background: url("../images/main_visual-01.png") no-repeat center / cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .vs-bg2 {
   width: 100%;
@@ -232,7 +236,7 @@ img {
 }
 .visual-box-text {
   position: absolute;
-  top: 33%;
+  top: 30%;
   left: 13%;
 }
 .visual-box .sub,
@@ -366,39 +370,40 @@ img {
   object-fit: cover;
   transition: all 0.4s;
 }
+.quick-img li span{
+  text-align: center;
+  font-size: 1.5rem;
+}
 /* animation effect */
 .hover{
   position: absolute;
-  top: -21px;
+  top: -27px;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 3;
 }
-.hover:hover{
-  stroke-dashoffset: -500px;
-  animation: progress 2s ease-in;
-}
-.svg{
+.c3{
   width: 100%;
   height: 100%;
+  transform: rotate(270deg);
+  opacity: 0;
+  transition: forwards .8s;
 }
-.progress {
-  fill: none;
-  stroke: rgb(167, 25, 25);
-  stroke-width: 8;
-  stroke-dasharray: 500;
-  
-  transform-origin: center;
-  transform: rotate(-90deg);
-}
-@keyframes progress {
-  100%
-  {
+@keyframes d3 {
+  from {
+    stroke-dasharray: 0, 150;
     stroke-dashoffset: 0;
   }
+  to {
+    stroke-dasharray: 150, 0;
+    stroke-dashoffset: 150;
+  }
 }
-
+.c3:hover {
+  animation: d3 1s forwards;
+  opacity: 1;
+}
 
 /* about repose */
 .about-repose {
@@ -406,13 +411,14 @@ img {
   width: 100%;
   min-width: 1340px;
   height: 100vh;
+  min-height: 800px;
   background-color: #7aadd31a;
 }
 .about-repose .inner{
-  padding: 10px;
+  padding: 0;
 }
 .about-repose .number-bar {
-  margin-top: 5rem;
+  padding-top: 10rem;
 }
 .about_slider {
   width: 100%;
@@ -444,7 +450,7 @@ img {
   text-transform: capitalize;
   word-break: keep-all;
   line-height: 1.23;
-  margin-top: 40px;
+  /* margin-top: 40px; */
 }
 .f-times {
   font-family: "timesroman-italic";
@@ -452,7 +458,7 @@ img {
   font-style: italic;
 }
 .sub-txt {
-  padding: 40px 0;
+  padding-top: 10px;
   font-size: 1.8rem;
   font-weight: 300;
   line-height: 1.56;
@@ -462,7 +468,7 @@ img {
   width: 30%;
   font-size: 1.8rem;
   position: absolute;
-  bottom: 16%;
+  bottom: 15%;
   left: 0;
   z-index: 9;
 }
