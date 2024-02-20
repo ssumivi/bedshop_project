@@ -73,7 +73,7 @@ window.addEventListener("load", function () {
   //repose product
   var swiper = new Swiper(".repos-img", {
     loop: true,
-    slidesPerView: 4,
+    // slidesPerView: 4,
     spaceBetween: 7,
     scrollbar: {
       el: ".s-scroll",
@@ -81,6 +81,24 @@ window.addEventListener("load", function () {
     navigation: {
       nextEl: ".next-btn",
       prevEl: ".prev-btn",
+    },
+    breakpoints: {
+      400: {
+        slidesPerView: 1,
+        spaceBetween: 3,
+      },
+      600: {
+        slidesPerView: 2,
+        spaceBetween: 3,
+      },
+      970: {
+        slidesPerView: 3, //브라우저가 970보다 클 때
+        spaceBetween: 3,
+      },
+      1300: {
+        slidesPerView: 4,
+        spaceBetween: 3,
+      },
     },
   });
   //  insta
@@ -92,29 +110,42 @@ window.addEventListener("load", function () {
     slidesPerView: 6,
     spaceBetween: 20,
     freeMode: true,
+    breakpoints: {
+      735: {
+        slidesPerView: 6,
+        spaceBetween: 20,
+      },
+      480: {
+        slidesPerView: 5,
+        spaceBetween: 15,
+      },
+      320: {
+        slidesPerView: 4,
+        spaceBetween: 15,
+      },
+    },
   });
   //안내창
   const body = document.querySelector("body");
- const modal = document.querySelector(".modal-wrap");
- const modalClose = this.document.querySelector(".modal-close")
- // isOpen 값에 따라 스크롤을 제어하는 함수
- function controlScroll(isOpen) {
-   if (isOpen) {
-     body.style.overflow = "hidden";
-   } else {
-     body.style.overflow = "auto";
-   }
- }
- 
- // 초기 모달 상태 설정
- const isOpen = true;
- controlScroll(isOpen);
- 
- modalClose.addEventListener("click", function () {
-   modal.style.display = "none";
-  
-   // 모달이 닫힐 때는 스크롤을 다시 활성화
-   controlScroll(false);
- });
- });
+  const modal = document.querySelector(".modal-wrap");
+  const modalClose = this.document.querySelector(".modal-close");
+  // isOpen 값에 따라 스크롤을 제어하는 함수
+  function controlScroll(isOpen) {
+    if (isOpen) {
+      body.style.overflow = "hidden";
+    } else {
+      body.style.overflow = "auto";
+    }
+  }
 
+  // 초기 모달 상태 설정
+  const isOpen = true;
+  controlScroll(isOpen);
+
+  modalClose.addEventListener("click", function () {
+    modal.style.display = "none";
+
+    // 모달이 닫힐 때는 스크롤을 다시 활성화
+    controlScroll(false);
+  });
+});
