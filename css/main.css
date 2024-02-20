@@ -16,6 +16,9 @@ html {
   font-size: 10px;
   font-family: "Pretendard-Regular";
 }
+html.active {
+  overflow: hidden;
+}
 a {
   text-decoration: none;
 }
@@ -162,7 +165,7 @@ body.active {
 .header.active {
   background-color: rgba(255, 255, 255, 1);
   border-bottom: 1px solid rgba(223, 223, 223, 0.3);
-  transition: all 0.3s;
+  transition: all 0.4s;
 }
 .header.active .top-nav-left a {
   color: #222;
@@ -192,7 +195,7 @@ body.active {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: #f01111;
+  background-color: #000;
 }
 .mobile-btn.active span {
   background-color: #222;
@@ -265,7 +268,7 @@ body.active {
 .left-depth2::after {
   content: ""; /* 가상 요소에 내용을 추가 */
   position: absolute; /* 가상 요소를 부모 요소에 대해 절대 위치로 설정 */
-  top: 3.1rem; /* 선의 세로 위치를 조절 */
+  top: 32px; /* 선의 세로 위치를 조절 */
   left: -1rem; /* 선의 가로 위치를 조절 */
   height: calc(65vh - 80px); /* 가로선이 헤더의 전체 너비를 가지도록 설정 */
   min-height: calc(640px - 80px);

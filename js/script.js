@@ -1,5 +1,6 @@
 window.addEventListener("load", function () {
   const header = document.querySelector(".header");
+  const mbt = this.document.querySelector(".mobile-btn");
   const rightDepth1 = this.document.querySelector(".right-depth1-img");
   const rightDepth2 = this.document.querySelector(".right-depth2-img");
   const rightDepth3 = this.document.querySelector(".right-depth3-img");
@@ -18,6 +19,50 @@ window.addEventListener("load", function () {
         elements[i].classList.remove("active");
       }
     }
+  });
+  //mobile menu
+  const navmb = this.document.querySelector(".mobile-menu");
+  const htmlRoot = this.document.querySelector("html");
+  const bgc = this.document.querySelector(".mobile-nav")
+
+  mbt.addEventListener("click", function () {
+    const state = this.classList.contains("ani");
+    if (state) {
+      //햄버거 버튼 눌렀을 때 X 모양으로 바뀜
+      this.classList.remove("ani");
+      //모바일 메뉴창 열리는 코드
+      navmb.classList.remove("active");
+      //메뉴창 열렸을 때 스크롤 안 생기게 해줌
+      htmlRoot.classList.remove("active");
+      bgc.classList.remove("active")
+    } else {
+      //햄버거 버튼 눌렀을 때 X 모양으로 바뀜
+      this.classList.add("ani");
+      //모바일 메뉴창 열리는 코드
+      navmb.classList.add("active");
+      //메뉴창 열렸을 때 스크롤 안 생기게 해줌
+      htmlRoot.classList.add("active");
+      bgc.classList.add("active")
+    }
+  });
+
+  var leftDepth1MbItems = document.querySelectorAll(".left-depth1-mb > li");
+
+  leftDepth1MbItems.forEach(function(item) {
+    item.addEventListener("click", function() {
+      var leftDepth2Mb = this.querySelector(".left-depth2-mb");
+      var allDepth2Mb = document.querySelectorAll(".left-depth2-mb");
+      
+      allDepth2Mb.forEach(function(depth2Item) {
+        if (depth2Item !== leftDepth2Mb) {
+          depth2Item.classList.remove("show");
+        }
+      });
+
+      if (leftDepth2Mb) {
+        leftDepth2Mb.classList.toggle("show");
+      }
+    });
   });
   //aos 추가
   AOS.init();
