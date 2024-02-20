@@ -123,7 +123,7 @@ window.addEventListener("load", function () {
   //repose product
   var swiper = new Swiper(".repos-img", {
     loop: true,
-    slidesPerView: 4,
+    // slidesPerView: 4,
     spaceBetween: 7,
     scrollbar: {
       el: ".s-scroll",
@@ -131,6 +131,24 @@ window.addEventListener("load", function () {
     navigation: {
       nextEl: ".next-btn",
       prevEl: ".prev-btn",
+    },
+    breakpoints: {
+      400: {
+        slidesPerView: 1,
+        spaceBetween: 3,
+      },
+      600: {
+        slidesPerView: 2,
+        spaceBetween: 3,
+      },
+      970: {
+        slidesPerView: 3, //브라우저가 970보다 클 때
+        spaceBetween: 3,
+      },
+      1300: {
+        slidesPerView: 4,
+        spaceBetween: 3,
+      },
     },
   });
   //  insta
@@ -142,6 +160,20 @@ window.addEventListener("load", function () {
     slidesPerView: 6,
     spaceBetween: 20,
     freeMode: true,
+    breakpoints: {
+      735: {
+        slidesPerView: 6,
+        spaceBetween: 20,
+      },
+      480: {
+        slidesPerView: 5,
+        spaceBetween: 15,
+      },
+      320: {
+        slidesPerView: 4,
+        spaceBetween: 15,
+      },
+    },
   });
   //안내창
   const body = document.querySelector("body");
