@@ -121,17 +121,22 @@
   }
 }
 @media all and (max-width: 1150px) {
-
   /* header */
+  .header {
+    height: 90px;
+  }
   .header:hover {
     width: 100%;
-    height: 65vh;
-    min-height: 640px;
-    max-height: 650px;
+    height: 90px;
+    min-height: 90px;
+    max-height: 90px;
     background-color: transparent;
   }
   .header:hover::after {
     opacity: 0;
+  }
+  .header:hover .left-depth2 {
+    display: none;
   }
   /* top */
   .top-nav {
@@ -145,9 +150,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 120px;
+    height: 90px;
   }
-  .mobile-nav:hover{
+  .mobile-nav.active {
     background-color: #fff;
   }
   .mobile-btn {
@@ -167,23 +172,77 @@
   .mobile-menu {
     display: block;
     position: fixed;
-    top: 120px;
-    right: 0;
+    top: 90px;
+    left: 100%;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 90px);
+    overflow-y: auto;
     /* padding: 20px; */
     background-color: #fff;
+    opacity: 0;
+    transition: left 0.5s;
+  }
+  .mobile-menu.active {
+    left: 0;
+    opacity: 1;
+  }
+  .mobile-menu.active > .mobile-nav {
+    background-color: #fff;
+  }
+  .top-depth1 {
+    width: 80%;
+    min-width: 760px;
+    height: 30px;
+    margin: 76px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    /* background-color: rgb(171, 154, 154); */
+    border: 1px solid #333;
+    opacity: 0.3;
+  }
+  .top-depth1 > li{
+    position: relative;
+    width: calc(100% / 3);
+  }
+  .top-depth1 > li:not(:first-child):after{
+    content: ""; /* 가상 요소에 내용을 추가 */
+    position: absolute; /* 가상 요소를 부모 요소에 대해 절대 위치로 설정 */
+    top: 2px; /* 선의 세로 위치를 조절 */
+    left: 0; /* 선의 가로 위치를 조절 */
+    height: 30px; /* 가로선이 헤더의 전체 너비를 가지도록 설정 */
+    width: 1px; /* 선의 높이(두께)를 조절 */
+    background-color: #333; /* 선의 색상을 지정 */
+    opacity: 1;
+  }
+  .top-depth1 > li > a > img:nth-of-type(odd) {
+    filter: brightness(0.1);
+  }
+  .top-depth1 > li > a > img {
+    width: 30px;
+    height: 30px;
+    padding-bottom: 5px;
+    object-fit: cover;
+    vertical-align: middle;
+  }
+  .top-depth1 .top-mb-txt {
+    font-size: 2.1rem;
+    line-height: 30px;
+    color: #333;
+  }
+  .cart{
+    top: 0;
+    left: 38%;
   }
   .left-depth1-mb {
     margin-top: 120px;
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
-  .left-depth1-mb li {
+  .left-depth1-mb > li {
     position: relative;
     padding: 30px;
-  }
-  .left-depth1-mb li:hover .left-depth2-mb{
-    display: block;
   }
   .left-depth1-mb > li::after {
     content: ""; /* 가상 요소에 내용을 추가 */
@@ -203,7 +262,7 @@
     right: 0; /* 선의 가로 위치를 조절 */
     height: 18px; /* 가로선이 헤더의 전체 너비를 가지도록 설정 */
     width: 18px; /* 선의 높이(두께)를 조절 */
-    background: url("../images/chevron.svg") no-repeat center / cover;/* 선의 색상을 지정 */
+    background: url("../images/chevron_down.svg") no-repeat center / cover; /* 선의 색상을 지정 */
     opacity: 0.5;
   }
 
@@ -215,6 +274,38 @@
   }
   .left-depth2-mb {
     display: none;
+    margin-top: 35px;
+    /* padding: 20px; */
+    font-weight: 300;
+    line-height: 1.4;
+  }
+  .left-depth2-mb > li {
+    position: relative;
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    background-color: rgba(234, 234, 234, 0.4);
+  }
+  .depth-line {
+    margin-bottom: 20px;
+  }
+  .depth-line:after {
+    content: ""; /* 가상 요소에 내용을 추가 */
+    position: absolute; /* 가상 요소를 부모 요소에 대해 절대 위치로 설정 */
+    top: 30%; /* 선의 세로 위치를 조절 */
+    left: 2%; /* 선의 가로 위치를 조절 */
+    height: 1px; /* 가로선이 헤더의 전체 너비를 가지도록 설정 */
+    width: 96%; /* 선의 높이(두께)를 조절 */
+    background-color: #222; /* 선의 색상을 지정 */
+    /* opacity: 0.2; */
+  }
+  .left-depth2-mb.show {
+    display: block;
+  }
+  .depth2-bt-mb {
+    padding-top: 45px;
+    font-size: 1.8rem;
+    opacity: 0.7;
   }
   /* about */
   .about-repose {
