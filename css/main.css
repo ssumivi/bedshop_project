@@ -168,11 +168,15 @@ body.active {
   color: #222;
 }
 /* top menu mobile */
+.mobile-nav,
+.mobile-menu {
+  display: none;
+}
 .mobile-btn {
   position: absolute;
-  top: 50%;
+  top: 48%;
   transform: translateY(-50%);
-  right: 20px;
+  right: 50px;
   width: 30px;
   height: 22px;
   background-color: transparent;
@@ -215,6 +219,9 @@ body.active {
 }
 .mobile-btn.ani span:nth-child(3) {
   transform: rotate(-45deg);
+}
+.mb-logo {
+  display: none;
 }
 /* top menu desktop*/
 .top-nav {
@@ -1161,7 +1168,7 @@ body.active {
 .bar2 {
   width: 100%;
   height: 1px;
-  background-color:#456dae;
+  background-color: #456dae;
   display: block;
   text-align: center;
   align-items: center;
@@ -1186,16 +1193,16 @@ body.active {
   /* height: 519.47px; */
   position: relative;
 }
-.footer-logo{
- width: 15%;
+.footer-logo {
+  width: 15%;
   padding: 2vw;
 }
-.footer-logo img{
- width: 100%;
+.footer-logo img {
+  width: 100%;
 }
-.footer-inner{
-display: flex;
-gap: 2vw;
+.footer-inner {
+  display: flex;
+  gap: 2vw;
 }
 .footer-inner2 {
   width: 80%;
@@ -1276,7 +1283,7 @@ gap: 2vw;
 .facebook_bt img {
   padding-left: 5px;
 }
-.copyrighter{
+.copyrighter {
   color: #fff;
   font-size: 12px;
   padding: 20px;
@@ -1298,11 +1305,11 @@ gap: 2vw;
   opacity: 10%;
   margin-top: 11.5px;
 } */
-.footer-bt{
-  position:relative;
+.footer-bt {
+  position: relative;
   width: 100%;
 }
-.footer-bt img{
+.footer-bt img {
   height: 100%;
   width: 100%;
   display: block;
