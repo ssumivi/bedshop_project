@@ -60,12 +60,10 @@
 @media all and (max-width: 1400px) {
   .insta-img .swiper-slide {
     /* width: 80px; */
-
     border-radius: 20%;
     overflow: hidden;
     position: relative;
   }
-
   .footer-logo img {
     width: 130px;
   }
@@ -121,8 +119,104 @@
   }
 }
 @media all and (max-width: 1150px) {
-  .about-repose{
-    height: 120vh;
+
+  /* header */
+  .header:hover {
+    width: 100%;
+    height: 65vh;
+    min-height: 640px;
+    max-height: 650px;
+    background-color: transparent;
+  }
+  .header:hover::after {
+    opacity: 0;
+  }
+  /* top */
+  .top-nav {
+    position: relative;
+  }
+  .mobile-none {
+    display: none;
+  }
+  .mobile-nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+  }
+  .mobile-nav:hover{
+    background-color: #fff;
+  }
+  .mobile-btn {
+    display: block;
+  }
+  .mb-logo {
+    display: block;
+    width: 120px;
+    height: 100%;
+    margin: auto;
+  }
+  .mb-logo img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .mobile-menu {
+    display: block;
+    position: fixed;
+    top: 120px;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    /* padding: 20px; */
+    background-color: #fff;
+  }
+  .left-depth1-mb {
+    margin-top: 120px;
+    font-size: 2rem;
+  }
+  .left-depth1-mb li {
+    position: relative;
+    padding: 30px;
+  }
+  .left-depth1-mb li:hover .left-depth2-mb{
+    display: block;
+  }
+  .left-depth1-mb > li::after {
+    content: ""; /* 가상 요소에 내용을 추가 */
+    position: absolute; /* 가상 요소를 부모 요소에 대해 절대 위치로 설정 */
+    bottom: 0; /* 선의 세로 위치를 조절 */
+    left: 0; /* 선의 가로 위치를 조절 */
+    height: 1px; /* 가로선이 헤더의 전체 너비를 가지도록 설정 */
+    width: 100%; /* 선의 높이(두께)를 조절 */
+    background-color: #456dae; /* 선의 색상을 지정 */
+    opacity: 0.2;
+  }
+  .left-depth1-mb > li > a::before {
+    content: ""; /* 가상 요소에 내용을 추가 */
+    position: absolute; /* 가상 요소를 부모 요소에 대해 절대 위치로 설정 */
+    top: 50%; /* 선의 세로 위치를 조절 */
+    transform: translateY(-50%);
+    right: 0; /* 선의 가로 위치를 조절 */
+    height: 18px; /* 가로선이 헤더의 전체 너비를 가지도록 설정 */
+    width: 18px; /* 선의 높이(두께)를 조절 */
+    background: url("../images/chevron.svg") no-repeat center / cover;/* 선의 색상을 지정 */
+    opacity: 0.5;
+  }
+
+  .left-depth1-mb li a {
+    display: block;
+    position: relative;
+    width: 100%;
+    color: #222;
+  }
+  .left-depth2-mb {
+    display: none;
+  }
+  /* about */
+  .about-repose {
+    height: 100vh;
   }
   .about-repose .inner {
     width: 80%;
@@ -146,7 +240,6 @@
     justify-content: center;
     opacity: 1;
   }
-
   .info-left {
     position: absolute;
     bottom: -25%;
@@ -155,21 +248,43 @@
     padding-left: 15%;
     /* display: none; */
   }
-  .no-fs{
+  .no-fs {
     display: block;
     position: absolute;
     top: 120%;
-    left: 28%;
+    /* left: 28%; */
+    width: 250px;
+    border: 1px solid #b8b8b8;
+    text-align: left;
+    cursor: pointer;
   }
-  .about_slider .swiper-slide .info-right{
+  .no-fs a {
+    font-size: 1.8rem;
+    line-height: 5rem;
+    padding-left: 20px;
+    color: #777777;
+    text-transform: capitalize;
+  }
+  .no-fs a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 22px;
+    width: 15px;
+    height: 15px;
+    background: url("../images/Asset1.png") no-repeat center / cover;
+  }
+  .about_slider .swiper-slide .info-right {
     width: 76%;
     height: 100%;
   }
-  .about_slider .img-box{
+  .about_slider .img-box {
     width: 100%;
     height: 100%;
   }
-  .about_slider .img-box img{
+  .about_slider .img-box img {
     width: 100%;
     height: 100%;
     /* display: none; */
@@ -188,65 +303,8 @@
   .about-list {
     display: none;
   }
-  /* 채은 영역 */
-  .insta-img .swiper-slide {
-    width: 70px;
-    /* height: 150px; */
-    border-radius: 20%;
-    overflow: hidden;
-    position: relative;
-  }
-  .footer-logo img {
-    width: 100px;
-  }
-  .footer-inner2 {
-    width: 100%;
-    /* padding: 20px; */
-    margin-top: 20px;
-  }
-
-  .korea-companywrap dt {
-    font-size: 11px;
-    margin-right: 7px;
-    line-height: 20px;
-    opacity: 70%;
-  }
-  .korea-companywrap dd {
-    font-size: 10px;
-    opacity: 40%;
-  }
-  .footer-inner2 > p {
-    font-size: 25px;
-    margin-top: 20px;
-    color: #fff;
-  }
-  .bt_num {
-    font-size: 30px;
-    margin-top: 10px;
-    margin-bottom: 7px;
-  }
-  .korea-company3 ul {
-    font-size: 13px;
-  }
-  .footer-inner2 > p {
-    font-size: 20px;
-    margin: 20px;
-    color: #fff;
-  }
-
-}
-@media all and (max-width: 980px) {
   .inner {
     max-width: 820px;
-  }
-  .top-nav {
-    position: relative;
-  }
-  .mobile-none {
-    display: none;
-  }
-  .mobile-btn {
-    display: block;
   }
   /* collection */
   .collection {
@@ -255,9 +313,19 @@
     display: none;
   }
   .collection-mobile {
+    position: relative;
     width: 100%;
     display: flex;
     margin: 150px 0;
+  }
+  .collec-bg-mobile {
+    position: absolute;
+    top: -7%;
+    right: 15px;
+    width: 400px;
+    height: 189px;
+    background: url("../images/collect_bg.png") no-repeat center / contain;
+    opacity: 0.1;
   }
   .collection-mobile .collec-swiper {
     width: 100%;
@@ -274,7 +342,9 @@
     height: 1.2px;
     opacity: 0.6;
   }
-  .collection-mobile .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+  .collection-mobile
+    .swiper-pagination-progressbar
+    .swiper-pagination-progressbar-fill {
     background-color: #456dae;
   }
   .collection-mobile .collection-list {
@@ -427,6 +497,51 @@
   .n5 .more-img {
     top: 8%;
     width: 60%;
+  }
+  /* 채은 영역 */
+  .insta-img .swiper-slide {
+    width: 70px;
+    /* height: 150px; */
+    border-radius: 20%;
+    overflow: hidden;
+    position: relative;
+  }
+  .footer-logo img {
+    width: 100px;
+  }
+  .footer-inner2 {
+    width: 100%;
+    /* padding: 20px; */
+    margin-top: 20px;
+  }
+
+  .korea-companywrap dt {
+    font-size: 11px;
+    margin-right: 7px;
+    line-height: 20px;
+    opacity: 70%;
+  }
+  .korea-companywrap dd {
+    font-size: 10px;
+    opacity: 40%;
+  }
+  .footer-inner2 > p {
+    font-size: 25px;
+    margin-top: 20px;
+    color: #fff;
+  }
+  .bt_num {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 7px;
+  }
+  .korea-company3 ul {
+    font-size: 13px;
+  }
+  .footer-inner2 > p {
+    font-size: 20px;
+    margin: 20px;
+    color: #fff;
   }
 }
 @media all and (max-width: 942px) {
@@ -681,7 +796,6 @@
   }
 }
 @media all and (max-width: 733px) {
- 
   .sign-up-p2 {
     font-size: 14px;
   }
@@ -729,8 +843,6 @@
   .qna-bt ul li a {
     flex-direction: column;
   }
-
- 
 }
 @media all and (max-width: 634px) {
   .insta-img .swiper-slide {
@@ -745,11 +857,10 @@
   }
 }
 @media all and (max-width: 598px) {
-  .repos-li1{
+  .repos-li1 {
     margin-left: 50px;
-    
   }
- }
+}
 
 @media all and (max-width: 528px) {
   .footer-logo {
@@ -780,10 +891,9 @@
   .naver_bt img {
     padding: 6px 5px;
   }
-  .korea-Company-li{
+  .korea-Company-li {
     font-size: 10px;
   }
- 
 }
 @media all and (max-width: 469px) {
   .qna-top p {
@@ -798,34 +908,34 @@
     width: 50px;
     height: 8%;
   }
- 
+
   ul.korea-Company-li {
     font-size: 10px;
   }
 }
-@media all and (max-width: 449px){
+@media all and (max-width: 449px) {
   ul.korea-Company-li {
     font-size: 9px;
   }
-  .footer-inner{
-    flex-wrap: wrap
+  .footer-inner {
+    flex-wrap: wrap;
   }
 
-    .footer-logo {
-      width: 100%;
-      padding-left: 10px;
-      padding-top: 40px;
-    }
-    .footer-logo img {
-      width: 100px;
-      height: 100%;
-    }
+  .footer-logo {
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 40px;
   }
-  @media all and (max-width: 426px){
-    .qna-bt span{
-     font-size: 10px;
-    }
+  .footer-logo img {
+    width: 100px;
+    height: 100%;
   }
+}
+@media all and (max-width: 426px) {
+  .qna-bt span {
+    font-size: 10px;
+  }
+}
 @media all and (max-width: 390px) {
   .qna-bt p {
     font-size: 12px;
@@ -833,7 +943,7 @@
   .qna-bt span {
     font-size: 9px;
   }
-  
+
   .korea-companywrap dt {
     font-size: 6px;
     margin-right: 7px;
@@ -846,13 +956,12 @@
   }
   ul.korea-Company-li {
     font-size: 9px;
-   
   }
-  .Copyrightc{
-font-size: 8px;
+  .Copyrightc {
+    font-size: 8px;
   }
 }
-@media all and (max-width: 383px){
+@media all and (max-width: 383px) {
   .korea-companywrap dt {
     font-size: 8px;
     margin-right: 7px;
@@ -864,7 +973,7 @@ font-size: 8px;
     opacity: 40%;
   }
 }
-@media all and (max-width: 343px){
+@media all and (max-width: 343px) {
   .korea-companywrap dt {
     font-size: 5px;
     margin-right: 7px;
@@ -881,7 +990,7 @@ font-size: 8px;
   .qna-bt span {
     font-size: 7px;
   }
-  .korea-Company-li li{
-    font-size: 7px; 
-}
+  .korea-Company-li li {
+    font-size: 7px;
+  }
 }
