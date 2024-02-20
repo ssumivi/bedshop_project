@@ -60,10 +60,12 @@
 @media all and (max-width: 1400px) {
   .insta-img .swiper-slide {
     /* width: 80px; */
+
     border-radius: 20%;
     overflow: hidden;
     position: relative;
   }
+
   .footer-logo img {
     width: 130px;
   }

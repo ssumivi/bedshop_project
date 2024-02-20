@@ -19,29 +19,6 @@ window.addEventListener("load", function () {
       }
     }
   });
-  //mobile header
-  const mbt = this.document.querySelector(".mobile-btn");
-  const htmlRoot = this.document.querySelector("html");
-
-  mbt.addEventListener("click", function () {
-    const state = this.classList.contains("ani");
-    if (state) {
-      //햄버거 버튼 눌렀을 때 X 모양으로 바뀜
-      this.classList.remove("ani");
-      //모바일 메뉴창 열리는 코드
-      navmb.classList.remove("active");
-      //메뉴창 열렸을 때 스크롤 안 생기게 해줌
-      htmlRoot.classList.remove("active");
-    } else {
-      //햄버거 버튼 눌렀을 때 X 모양으로 바뀜
-      this.classList.add("ani");
-      //모바일 메뉴창 열리는 코드
-      navmb.classList.add("active");
-      //메뉴창 열렸을 때 스크롤 안 생기게 해줌
-      htmlRoot.classList.add("active");
-    }
-  });
-
   //aos 추가
   AOS.init();
   //visual slide

@@ -16,9 +16,6 @@ html {
   font-size: 10px;
   font-family: "Pretendard-Regular";
 }
-html.active {
-  overflow: hidden;
-}
 a {
   text-decoration: none;
 }
