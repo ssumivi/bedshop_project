@@ -24,7 +24,7 @@ window.addEventListener("load", function () {
   //visual slide
   var swiper = new Swiper(".mainVisual", {
     loop: true,
-    autoplay: true,
+    // autoplay: true,
     delay: 5000,
     speed: 1500,
     pagination: {
@@ -40,27 +40,55 @@ window.addEventListener("load", function () {
     },
   });
   //about repose
-  //page가 처음 로드 되었을 때
+
+  let ww = window.innerWidth;
+  let aboutSlider = null; // null로 초기화
+
+  responsiveSwiper();
+
+  function initSwiper(effect) {
+    if (aboutSlider !== null) {
+      aboutSlider.destroy(); // 기존 슬라이더가 존재하면 파괴
+    }
+
+    aboutSlider = new Swiper(".about_slider", {
+      fadeEffect: { crossFade: true },
+      speed: 1000,
+      loop: false,
+      on: {
+        slideChange: function () {
+          const idx = this.realIndex;
+          for (let menu of menus) {
+            menu.classList.remove("act");
+          }
+          menus[idx].classList.add("act");
+        },
+      },
+      effect: effect,
+    });
+
+    return aboutSlider; // aboutSlider 반환
+  }
+
+  function responsiveSwiper() {
+    if (ww < 1150) {
+      initSwiper("slide");
+    } else if (ww >= 1150) {
+      initSwiper("fade");
+    }
+  }
+
+  window.addEventListener("resize", function () {
+    ww = window.innerWidth;
+    responsiveSwiper();
+  });
+
   document.addEventListener("DOMContentLoaded", function () {
     // 페이지가 로드될 때 첫 번째 메뉴 항목에 대한 마우스 오버 이벤트를 수행
     menus[0].dispatchEvent(new MouseEvent("mouseover"));
   });
 
   const menus = document.querySelectorAll(".about-repose .about-list li");
-  const aboutSlider = new Swiper(".about_slider", {
-    effect: "fade",
-    speed: 1000,
-    loop: false,
-    on: {
-      slideChange: function () {
-        const idx = this.realIndex;
-        for (let menu of menus) {
-          menu.classList.remove("act");
-        }
-        menus[idx].classList.add("act");
-      },
-    },
-  });
   function getElementIndex(element) {
     return Array.from(element.parentElement.children).indexOf(element);
   }
@@ -70,6 +98,28 @@ window.addEventListener("load", function () {
       aboutSlider.slideTo(idx);
     });
   });
+
+  if (window.innerWidth <= 1150) {
+    var swiper = new Swiper(".mobile-collec", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  }
+  //collection mobile
+  var swiper = new Swiper(".collec-swiper", {
+    slidesPerView: 1.15,
+    spaceBetween: 30,
+    // loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar",
+    },
+  });
+
   //repose product
   var swiper = new Swiper(".repos-img", {
     loop: true,
@@ -95,26 +145,25 @@ window.addEventListener("load", function () {
   });
   //안내창
   const body = document.querySelector("body");
- const modal = document.querySelector(".modal-wrap");
- const modalClose = this.document.querySelector(".modal-close")
- // isOpen 값에 따라 스크롤을 제어하는 함수
- function controlScroll(isOpen) {
-   if (isOpen) {
-     body.style.overflow = "hidden";
-   } else {
-     body.style.overflow = "auto";
-   }
- }
- 
- // 초기 모달 상태 설정
- const isOpen = true;
- controlScroll(isOpen);
- 
- modalClose.addEventListener("click", function () {
-   modal.style.display = "none";
-  
-   // 모달이 닫힐 때는 스크롤을 다시 활성화
-   controlScroll(false);
- });
- });
+  const modal = document.querySelector(".modal-wrap");
+  const modalClose = this.document.querySelector(".modal-close");
+  // isOpen 값에 따라 스크롤을 제어하는 함수
+  function controlScroll(isOpen) {
+    if (isOpen) {
+      body.style.overflow = "hidden";
+    } else {
+      body.style.overflow = "auto";
+    }
+  }
 
+  // 초기 모달 상태 설정
+  const isOpen = true;
+  controlScroll(isOpen);
+
+  modalClose.addEventListener("click", function () {
+    modal.style.display = "none";
+
+    // 모달이 닫힐 때는 스크롤을 다시 활성화
+    controlScroll(false);
+  });
+});
