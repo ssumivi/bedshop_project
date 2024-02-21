@@ -137,7 +137,7 @@ window.addEventListener("load", function () {
         slidesPerView: 1,
         spaceBetween: 3,
       },
-      600: {
+      700: {
         slidesPerView: 2,
         spaceBetween: 3,
       },
@@ -157,7 +157,7 @@ window.addEventListener("load", function () {
     autoplay: true,
     delay: 800,
     speed: 1100,
-    slidesPerView: 6,
+    slidesPerView: 2,
     spaceBetween: 20,
     freeMode: true,
     breakpoints: {
@@ -165,12 +165,16 @@ window.addEventListener("load", function () {
         slidesPerView: 6,
         spaceBetween: 20,
       },
-      480: {
+      600: {
         slidesPerView: 5,
         spaceBetween: 15,
       },
-      320: {
+      480: {
         slidesPerView: 4,
+        spaceBetween: 15,
+      },
+      320: {
+        slidesPerView: 3,
         spaceBetween: 15,
       },
     },

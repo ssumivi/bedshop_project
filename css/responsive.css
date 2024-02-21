@@ -121,7 +121,7 @@
   }
 }
 @media all and (max-width: 1150px) {
-  .about-repose{
+  .about-repose {
     height: 120vh;
   }
   .about-repose .inner {
@@ -155,21 +155,21 @@
     padding-left: 15%;
     /* display: none; */
   }
-  .no-fs{
+  .no-fs {
     display: block;
     position: absolute;
     top: 120%;
     left: 28%;
   }
-  .about_slider .swiper-slide .info-right{
+  .about_slider .swiper-slide .info-right {
     width: 76%;
     height: 100%;
   }
-  .about_slider .img-box{
+  .about_slider .img-box {
     width: 100%;
     height: 100%;
   }
-  .about_slider .img-box img{
+  .about_slider .img-box img {
     width: 100%;
     height: 100%;
     /* display: none; */
@@ -233,7 +233,6 @@
     margin: 20px;
     color: #fff;
   }
-
 }
 @media all and (max-width: 980px) {
   .inner {
@@ -274,7 +273,9 @@
     height: 1.2px;
     opacity: 0.6;
   }
-  .collection-mobile .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+  .collection-mobile
+    .swiper-pagination-progressbar
+    .swiper-pagination-progressbar-fill {
     background-color: #456dae;
   }
   .collection-mobile .collection-list {
@@ -653,6 +654,10 @@
     margin-left: 20px;
     font-size: 13px;
   }
+  .instagram-wrap.inner {
+    width: 100%;
+    margin: 0 10px;
+  }
 }
 @media all and (max-width: 809px) {
   .sign-up-p2 {
@@ -681,7 +686,6 @@
   }
 }
 @media all and (max-width: 733px) {
- 
   .sign-up-p2 {
     font-size: 14px;
   }
@@ -729,8 +733,6 @@
   .qna-bt ul li a {
     flex-direction: column;
   }
-
- 
 }
 @media all and (max-width: 634px) {
   .insta-img .swiper-slide {
@@ -744,12 +746,14 @@
     position: relative;
   }
 }
+@media all and (max-width: 618px){
+
+}
 @media all and (max-width: 598px) {
-  .repos-li1{
+  .repos-li1 {
     margin-left: 50px;
-    
   }
- }
+}
 
 @media all and (max-width: 528px) {
   .footer-logo {
@@ -780,10 +784,9 @@
   .naver_bt img {
     padding: 6px 5px;
   }
-  .korea-Company-li{
+  .korea-Company-li {
     font-size: 10px;
   }
- 
 }
 @media all and (max-width: 469px) {
   .qna-top p {
@@ -798,34 +801,34 @@
     width: 50px;
     height: 8%;
   }
- 
+
   ul.korea-Company-li {
     font-size: 10px;
   }
 }
-@media all and (max-width: 449px){
+@media all and (max-width: 449px) {
   ul.korea-Company-li {
     font-size: 9px;
   }
-  .footer-inner{
-    flex-wrap: wrap
+  .footer-inner {
+    flex-wrap: wrap;
   }
 
-    .footer-logo {
-      width: 100%;
-      padding-left: 10px;
-      padding-top: 40px;
-    }
-    .footer-logo img {
-      width: 100px;
-      height: 100%;
-    }
+  .footer-logo {
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 40px;
   }
-  @media all and (max-width: 426px){
-    .qna-bt span{
-     font-size: 10px;
-    }
+  .footer-logo img {
+    width: 100px;
+    height: 100%;
   }
+}
+@media all and (max-width: 426px) {
+  .qna-bt span {
+    font-size: 10px;
+  }
+}
 @media all and (max-width: 390px) {
   .qna-bt p {
     font-size: 12px;
@@ -833,7 +836,7 @@
   .qna-bt span {
     font-size: 9px;
   }
-  
+
   .korea-companywrap dt {
     font-size: 6px;
     margin-right: 7px;
@@ -846,13 +849,12 @@
   }
   ul.korea-Company-li {
     font-size: 9px;
-   
   }
-  .Copyrightc{
-font-size: 8px;
+  .Copyrightc {
+    font-size: 8px;
   }
 }
-@media all and (max-width: 383px){
+@media all and (max-width: 383px) {
   .korea-companywrap dt {
     font-size: 8px;
     margin-right: 7px;
@@ -864,7 +866,7 @@ font-size: 8px;
     opacity: 40%;
   }
 }
-@media all and (max-width: 343px){
+@media all and (max-width: 343px) {
   .korea-companywrap dt {
     font-size: 5px;
     margin-right: 7px;
@@ -881,7 +883,184 @@ font-size: 8px;
   .qna-bt span {
     font-size: 7px;
   }
-  .korea-Company-li li{
-    font-size: 7px; 
+  .korea-Company-li li {
+    font-size: 7px;
+  }
 }
+@media all and (max-width: 320px) {
+  .sign-up {
+    flex-direction: column;
+  }
+  .sign-up > li {
+    position: relative;
+    width: 100%;
+  }
+  .sigup-up-bg {
+    width: 100%;
+    height: 280px;
+  }
+  .review ul li {
+    position: relative;
+    width: 100%;
+  }
+  .review-bg {
+    height: 280px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .sign-up-h1 {
+  }
+  .sign-up-p {
+    font-size: 13px;
+    margin: 20;
+  }
+  .sign-up-p2 {
+    font-size: 12px;
+  }
+  .review-p {
+    font-size: 13px;
+  }
+  .review-p2 {
+    font-size: 13px;
+  }
+  .bt2 {
+    margin-left: 80px;
+    margin-top: 30px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    width: 180px;
+    height: 50px;
+    padding: 0 10px;
+    color: rgb(0, 0, 0, 0.7);
+    background-color: transparent;
+    left: 0;
+    border: 0;
+    border: 1.5px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+  .repos-h1 {
+    font-size: 40px;
+  }
+  .insta-top {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .insta-top p {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .insta-top span {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.4);
+  }
+  .product {
+    width: 320px;
+  }
+  .qna-top p {
+    font-size: 16px;
+  }
+  .qna-bt p {
+    font-size: 11px;
+  }
+  .qna-bt span {
+    align-items: center;
+    margin: 0;
+    font-size: 9px;
+  }
+  .qna-bt ul {
+    width: 70%;
+    margin-left: 15%;
+  }
+
+  .qna-bt {
+    line-height: 20px;
+  }
+
+  .qna-bt img {
+    width: 20px;
+    height: 30px;
+    margin-right: 20px;
+    /* margin-bottom: 50px; */
+    top: 0;
+    left: 0;
+  }
+  .bar2 {
+    width: 320px;
+    height: 1px;
+    background-color: #456dae;
+    display: block;
+    text-align: center;
+    align-items: center;
+    margin-top: 10px;
+    
+    opacity: 50%;
+  }
+  .footer-logo{
+    display: none;
+  }
+  .footer-logo img {
+    display: none;
+  }
+  .copyrighter{
+    display: none;
+  }
+  .footer-b-wrap{
+
+  }
+  .ft-company{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .ft-company li{
+    color: #fff;
+    font-size: 10px;
+    font-weight: 200;
+    display: block;
+    padding-top: 10px;
+  }
+  .footer-inner2{
+    margin-top: 0;
+  }
+  .ft-bar{
+    width: 320px;
+    height: 1px;
+    background-color: #ffffff;
+    display: block;
+    text-align: center;
+    align-items: center;
+    margin-top: 10px;
+    opacity: 50%;
+  }
+  .footer-inner2 p{
+    font-size: 14px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+  }
+  .korea-company dt{
+    font-size: 9px;
+  }
+  .korea-company dd{
+    font-size: 8px;
+  }
+  .korea-company2 dt{
+    font-size: 9px;
+  }
+  .korea-company2 dd{
+    font-size: 8px;
+}
+.korea-companywrap dl{
+  width: 320px;
+}
+.bt_num{
+  font-size: 20px;
+}
+.bt-b{
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
 }
