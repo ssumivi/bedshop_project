@@ -201,14 +201,15 @@
     opacity: 0.3;
   }
   .top-depth1 > li {
+    /* padding: 0 2px; */
     position: relative;
-    width: calc(95% / 3);
+    width: calc(100% / 3 - 15px);
   }
   .top-depth1 > li:not(:first-child):after {
     content: ""; /* 가상 요소에 내용을 추가 */
     position: absolute; /* 가상 요소를 부모 요소에 대해 절대 위치로 설정 */
     top: 5px; /* 선의 세로 위치를 조절 */
-    left: 0px; /* 선의 가로 위치를 조절 */
+    left: -4px; /* 선의 가로 위치를 조절 */
     height: 21px; /* 가로선이 헤더의 전체 너비를 가지도록 설정 */
     width: 1px; /* 선의 높이(두께)를 조절 */
     background-color: #5c5c5c; /* 선의 색상을 지정 */
@@ -230,7 +231,7 @@
     color: #333;
   }
   .left-depth1-mb {
-    margin-top: 120px;
+    margin-top: 80px;
     font-size: 2.3rem;
   }
   .left-depth1-mb > li {
