@@ -202,13 +202,13 @@
   }
   .top-depth1 > li {
     position: relative;
-    width: calc(100% / 3);
+    width: calc(95% / 3);
   }
   .top-depth1 > li:not(:first-child):after {
     content: ""; /* 가상 요소에 내용을 추가 */
     position: absolute; /* 가상 요소를 부모 요소에 대해 절대 위치로 설정 */
     top: 5px; /* 선의 세로 위치를 조절 */
-    left: 2px; /* 선의 가로 위치를 조절 */
+    left: 0px; /* 선의 가로 위치를 조절 */
     height: 21px; /* 가로선이 헤더의 전체 너비를 가지도록 설정 */
     width: 1px; /* 선의 높이(두께)를 조절 */
     background-color: #5c5c5c; /* 선의 색상을 지정 */
@@ -1175,68 +1175,20 @@
     height: 100%;
   }
 }
-@media all and (max-width: 426px) {
-  .qna-bt span {
-    font-size: 10px;
-  }
-}
-@media all and (max-width: 390px) {
-  .qna-bt p {
-    font-size: 12px;
-  }
-  .qna-bt span {
-    font-size: 9px;
-  }
-
-  .korea-companywrap dt {
-    font-size: 6px;
-    margin-right: 7px;
-    line-height: 20px;
-    opacity: 70%;
-  }
-  .korea-companywrap dd {
-    font-size: 9px;
-    opacity: 40%;
-  }
-  ul.korea-Company-li {
-    font-size: 9px;
-  }
-  .Copyrightc {
-    font-size: 8px;
-  }
-}
-@media all and (max-width: 393px) {
-  .korea-companywrap dt {
-    font-size: 8px;
-    margin-right: 7px;
-    line-height: 20px;
-    opacity: 70%;
-  }
-  .korea-companywrap dd {
-    font-size: 7px;
-    opacity: 40%;
-  }
-  .qna-bt ul li p {
-    line-height: 30px;
-}
-.footer-inner2{
-  margin-top: 0;
-}
-.ft-company li{
-  display: none;
-}
-.repos-h1{
-  font-size: 40px;
-}
-
-}
 @media all and (max-width: 430px) {
+  .repos-h1{
+    font-size: 40px;
+  }
   .mobile-btn{
     width: 22px;
     height: 16px;
   }
   .inner{
-    max-width: 420px;
+    max-width: 400px;
+    margin: auto;
+  }
+  .visual{
+    height: 72vh;
   }
   .about-repose .inner{
     height: 195vw;
@@ -1386,7 +1338,66 @@
     line-height: 3.5rem;
     font-size: 1.2rem;
   }
+  .ft-company > li{
+    display: none;
+  }
 }
+@media all and (max-width: 426px) {
+  .qna-bt span {
+    font-size: 10px;
+  }
+}
+@media all and (max-width: 390px) {
+  .qna-bt p {
+    font-size: 12px;
+  }
+  .qna-bt span {
+    font-size: 9px;
+  }
+
+  .korea-companywrap dt {
+    font-size: 6px;
+    margin-right: 7px;
+    line-height: 20px;
+    opacity: 70%;
+  }
+  .korea-companywrap dd {
+    font-size: 9px;
+    opacity: 40%;
+  }
+  ul.korea-Company-li {
+    font-size: 9px;
+  }
+  .Copyrightc {
+    font-size: 8px;
+  }
+}
+@media all and (max-width: 393px) {
+  .korea-companywrap dt {
+    font-size: 8px;
+    margin-right: 7px;
+    line-height: 20px;
+    opacity: 70%;
+  }
+  .korea-companywrap dd {
+    font-size: 7px;
+    opacity: 40%;
+  }
+  .qna-bt ul li p {
+    line-height: 30px;
+}
+.footer-inner2{
+  margin-top: 0;
+}
+.ft-company li{
+  display: none;
+}
+.repos-h1{
+  font-size: 40px;
+}
+
+}
+
 @media all and (max-width: 343px) {
   .korea-companywrap dt {
     font-size: 5px;
@@ -1484,7 +1495,7 @@
   .qna-top p {
     font-size: 16px;
   }
-  .qna-bt p {
+  .qna-bt > ul > li > p {
     font-size: 11px;
   }
   .qna-bt span {
@@ -1494,13 +1505,12 @@
   }
   .qna-bt ul {
     width: 70%;
-    margin-left: 15%;
+    /* margin-left: 15%; */
   }
 
   .qna-bt {
     line-height: 20px;
   }
-
   .qna-bt img {
     width: 20px;
     height: 30px;
