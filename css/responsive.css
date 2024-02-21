@@ -1341,6 +1341,9 @@
   .ft-company > li{
     display: none;
   }
+  .qna-bt ul li a{
+    gap: 10px;
+  }
 }
 @media all and (max-width: 426px) {
   .qna-bt span {
