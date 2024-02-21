@@ -1205,7 +1205,7 @@
     font-size: 8px;
   }
 }
-@media all and (max-width: 383px) {
+@media all and (max-width: 393px) {
   .korea-companywrap dt {
     font-size: 8px;
     margin-right: 7px;
@@ -1216,6 +1216,19 @@
     font-size: 7px;
     opacity: 40%;
   }
+  .qna-bt ul li p {
+    line-height: 30px;
+}
+.footer-inner2{
+  margin-top: 0;
+}
+.ft-company li{
+  display: none;
+}
+.repos-h1{
+  font-size: 40px;
+}
+
 }
 @media all and (max-width: 430px) {
   .mobile-btn{
@@ -1394,6 +1407,7 @@
   .korea-Company-li li {
     font-size: 7px;
   }
+}
 @media all and (max-width: 320px) {
   .sign-up {
     flex-direction: column;
@@ -1569,5 +1583,6 @@
   font-size: 9px;
   color: rgba(255, 255, 255, 0.4);
 }
+
 
 }
