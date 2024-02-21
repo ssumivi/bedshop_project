@@ -81,7 +81,7 @@ window.addEventListener("load", function () {
   //visual slide
   var swiper = new Swiper(".mainVisual", {
     loop: true,
-    // autoplay: true,
+    autoplay: true,
     delay: 5000,
     speed: 1500,
     pagination: {
@@ -112,8 +112,8 @@ window.addEventListener("load", function () {
     let spaceBetweenValue = 20; // 슬라이드 사이의 간격 기본값
     
     if (ww < 1150) {
-
-        slidesPerViewValue = 1.2; // 1150px 미만일 때 1.2개의 슬라이드를 보여줌
+        slidesPerViewValue = 1.2;
+        spaceBetweenValue = 10; // 1150px 미만일 때 1.2개의 슬라이드를 보여줌
     } 
     if (ww < 980) {
         slidesPerViewValue = 1.1; // 980px 미만일 때 1.1개의 슬라이드를 보여줌
