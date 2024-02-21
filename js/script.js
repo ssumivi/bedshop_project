@@ -4,7 +4,7 @@ window.addEventListener("load", function () {
   const rightDepth1 = this.document.querySelector(".right-depth1-img");
   const rightDepth2 = this.document.querySelector(".right-depth2-img");
   const rightDepth3 = this.document.querySelector(".right-depth3-img");
-  const scMbBtn = this.document.querySelector(".mobile-btn")
+  const scMbBtn = this.document.querySelector(".mobile-btn");
   let scy = 0;
 
   window.addEventListener("scroll", function () {
@@ -57,13 +57,13 @@ window.addEventListener("load", function () {
       var leftDepth2Mb = this.querySelector(".left-depth2-mb");
       var allDepth2Mb = document.querySelectorAll(".left-depth2-mb");
       var mbAni = this.querySelector(".chevron"); // 클릭된 li에 속한 chevron 요소만 선택
-  
+
       allDepth2Mb.forEach(function (depth2Item) {
         if (depth2Item !== leftDepth2Mb) {
           depth2Item.classList.remove("show");
         }
       });
-  
+
       if (leftDepth2Mb) {
         leftDepth2Mb.classList.toggle("show");
         mbAni.classList.toggle("ani"); // 클릭된 li에 속한 chevron 요소에만 애니메이션 클래스 추가
@@ -73,7 +73,7 @@ window.addEventListener("load", function () {
         } else {
           localStorage.removeItem("arrowState");
         }
-      } 
+      }
     });
   });
   //aos 추가
@@ -109,8 +109,9 @@ window.addEventListener("load", function () {
     }
     let slidesPerViewValue = 1; // 슬라이드 당 보여질 개수 기본값
     if (ww < 1150) {
-        slidesPerViewValue = 1.2; // 1150px 미만일 때 1.05개의 슬라이드를 보여줌
-    } if (ww < 980) {
+      slidesPerViewValue = 1.2; // 1150px 미만일 때 1.05개의 슬라이드를 보여줌
+    }
+    if (ww < 980) {
       slidesPerViewValue = 1.14;
     }
 
@@ -206,7 +207,7 @@ window.addEventListener("load", function () {
         slidesPerView: 1,
         spaceBetween: 3,
       },
-      700: {
+      600: {
         slidesPerView: 2,
         spaceBetween: 3,
       },
