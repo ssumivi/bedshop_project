@@ -16,6 +16,9 @@ html {
   font-size: 10px;
   font-family: "Pretendard-Regular";
 }
+html.active {
+  overflow: hidden;
+}
 a {
   text-decoration: none;
 }
@@ -162,17 +165,21 @@ body.active {
 .header.active {
   background-color: rgba(255, 255, 255, 1);
   border-bottom: 1px solid rgba(223, 223, 223, 0.3);
-  transition: all 0.3s;
+  transition: all 0.4s;
 }
 .header.active .top-nav-left a {
   color: #222;
 }
 /* top menu mobile */
+.mobile-nav,
+.mobile-menu {
+  display: none;
+}
 .mobile-btn {
   position: absolute;
-  top: 50%;
+  top: 48%;
   transform: translateY(-50%);
-  right: 20px;
+  right: 50px;
   width: 30px;
   height: 22px;
   background-color: transparent;
@@ -188,7 +195,7 @@ body.active {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: #f01111;
+  background-color: #fff;
 }
 .mobile-btn.active span {
   background-color: #222;
@@ -215,6 +222,9 @@ body.active {
 }
 .mobile-btn.ani span:nth-child(3) {
   transform: rotate(-45deg);
+}
+.mb-logo {
+  display: none;
 }
 /* top menu desktop*/
 .top-nav {
@@ -258,7 +268,7 @@ body.active {
 .left-depth2::after {
   content: ""; /* 가상 요소에 내용을 추가 */
   position: absolute; /* 가상 요소를 부모 요소에 대해 절대 위치로 설정 */
-  top: 3.1rem; /* 선의 세로 위치를 조절 */
+  top: 32px; /* 선의 세로 위치를 조절 */
   left: -1rem; /* 선의 가로 위치를 조절 */
   height: calc(65vh - 80px); /* 가로선이 헤더의 전체 너비를 가지도록 설정 */
   min-height: calc(640px - 80px);
@@ -1161,7 +1171,7 @@ body.active {
 .bar2 {
   width: 100%;
   height: 1px;
-  background-color:#456dae;
+  background-color: #456dae;
   display: block;
   text-align: center;
   align-items: center;
@@ -1186,16 +1196,16 @@ body.active {
   /* height: 519.47px; */
   position: relative;
 }
-.footer-logo{
- width: 15%;
+.footer-logo {
+  width: 15%;
   padding: 2vw;
 }
-.footer-logo img{
- width: 100%;
+.footer-logo img {
+  width: 100%;
 }
-.footer-inner{
-display: flex;
-gap: 2vw;
+.footer-inner {
+  display: flex;
+  gap: 2vw;
 }
 .footer-inner2 {
   width: 80%;
@@ -1276,7 +1286,7 @@ gap: 2vw;
 .facebook_bt img {
   padding-left: 5px;
 }
-.copyrighter{
+.copyrighter {
   color: #fff;
   font-size: 12px;
   padding: 20px;
@@ -1298,11 +1308,11 @@ gap: 2vw;
   opacity: 10%;
   margin-top: 11.5px;
 } */
-.footer-bt{
-  position:relative;
+.footer-bt {
+  position: relative;
   width: 100%;
 }
-.footer-bt img{
+.footer-bt img {
   height: 100%;
   width: 100%;
   display: block;
