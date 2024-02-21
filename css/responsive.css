@@ -707,8 +707,11 @@
   }
 }
 @media all and (max-width: 980px) {
+  .header.active{
+    border-bottom: 0;
+  }
   .visual{
-    height: 90vh;
+    height: 60vh;
   }
   .vs-bg1 {
     width: 100%;
@@ -726,6 +729,23 @@
     position: absolute;
     top: 60%;
     left: 13%;
+  }
+  .visual-box .sub {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 4;
+    text-shadow: none;
+  }
+  .visual-box p {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  }
+  .visual-box .sub-bt {
+    font-size: 3rem;
+    font-weight: 500;
   }
   .mainScrollBar
     .mainScrollBar.swiper-horizontal
@@ -1209,6 +1229,163 @@
   font-size: 40px;
 }
 
+}
+@media all and (max-width: 430px) {
+  .mobile-btn{
+    width: 22px;
+    height: 16px;
+  }
+  .inner{
+    max-width: 420px;
+  }
+  .about-repose .inner{
+    height: 195vw;
+    padding-top: 15%;
+  }
+  .about_slider{
+    padding-bottom: 60%;
+    padding-top: 20px;
+  }
+  .about_slider .swiper-slide{
+    width: 100%;
+    height: 100%;
+  }
+  .about_slider .swiper-slide .info-right {
+    width: 98%;
+    height: 100%;
+  }
+  .info-left {
+    position: absolute;
+    bottom: -50%;
+    width: 95%;
+    text-align: left;
+    padding-left: 0;
+    /* display: none; */
+  }
+  .sec-title{
+    font-size: 4.5rem;
+    padding-top: 30px;
+  }
+  .sub-txt {
+    height: 80px;
+    padding-top: 10px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.56;
+    white-space: wrap;
+    word-break: keep-all;
+  }
+  .no-fs {
+    display: block;
+    position: absolute;
+    top: 117%;
+    /* left: 28%; */
+    width: 165px;
+    border: 1px solid #b8b8b8;
+    text-align: left;
+    cursor: pointer;
+  }
+  .no-fs a {
+    font-size: 1.4rem;
+    line-height: 3.1rem;
+    padding-left: 20px;
+    color: #777777;
+    text-transform: capitalize;
+  }
+  .no-fs a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 22px;
+    width: 12px;
+    height: 12px;
+    background: url("../images/Asset1.png") no-repeat center / cover;
+  }
+  .collection-mobile .inner{
+    padding-top: 0;
+    /* padding-bottom: 200px; */
+  }
+  .collection-mobile .collec-swiper{
+    padding-bottom: 12%;
+  }
+  .collec-bg-mobile {
+    position: absolute;
+    top: -16%;
+    right: 12px;
+    width: 210px;
+    height: 189px;
+    background: url("../images/collect_bg.png") no-repeat center / contain;
+    opacity: 0.1;
+  }
+  .collection-mobile .swiper-horizontal > .swiper-pagination-progressbar,
+  .swiper-pagination-progressbar.swiper-pagination-horizontal,
+  .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
+  .swiper-vertical
+    > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+    position: absolute;
+    top: 98%;
+    left: 0;
+    height: 1.2px;
+    opacity: 0.3;
+  }
+  .collection-mobile .swiper-slide {
+    position: relative;
+    width: 100%;
+    height: 83vw;
+    margin-top: 30px;
+  }
+  .collection-mobile .collcetion-list{
+    width: 100%;
+    height: 100%;
+  }
+  .collection-mobile .collec-popup {
+    position: absolute;
+    bottom: -88%;
+    left: 50%;
+    width: 75%;
+    height: 75%;
+    padding: 20px;
+    text-align: center;
+    z-index: 5;
+    color: #fff;
+  }
+  .more-title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .more-logo {
+    position: absolute;
+    top: 19%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.3rem;
+  }
+  .n1::after, 
+  .n2::after,
+  .n3::after,
+  .n4::after,
+  .n5::after{
+    bottom: 0;
+    height: 80px;
+  }
+  .n5 .more-img {
+    top: 9.5%;
+    width: 60%;
+  }
+  .collec-viewmore {
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+  }
+  .collec-viewmore a {
+    line-height: 3.5rem;
+    font-size: 1.2rem;
+  }
 }
 @media all and (max-width: 343px) {
   .korea-companywrap dt {

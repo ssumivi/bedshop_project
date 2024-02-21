@@ -105,21 +105,28 @@ window.addEventListener("load", function () {
 
   function initSwiper(effect) {
     if (aboutSlider !== null) {
-      aboutSlider.destroy(); // 기존 슬라이더가 존재하면 파괴
+        aboutSlider.destroy(); // 기존 슬라이더가 존재하면 파괴
     }
+    
     let slidesPerViewValue = 1; // 슬라이드 당 보여질 개수 기본값
+    let spaceBetweenValue = 20; // 슬라이드 사이의 간격 기본값
+    
     if (ww < 1150) {
-      slidesPerViewValue = 1.2; // 1150px 미만일 때 1.05개의 슬라이드를 보여줌
-    }
+
+        slidesPerViewValue = 1.2; // 1150px 미만일 때 1.2개의 슬라이드를 보여줌
+    } 
     if (ww < 980) {
-      slidesPerViewValue = 1.14;
+        slidesPerViewValue = 1.1; // 980px 미만일 때 1.1개의 슬라이드를 보여줌
+        spaceBetweenValue = 10; // 980px 미만일 때 슬라이드 사이의 간격을 10px로 설정
     }
+
 
     aboutSlider = new Swiper(".about_slider", {
       fadeEffect: { crossFade: true },
       speed: 1000,
       loop: false,
       slidesPerView: slidesPerViewValue, // slidesPerView 설정
+      spaceBetween: spaceBetweenValue,
       on: {
         slideChange: function () {
           const idx = this.realIndex;
@@ -181,8 +188,8 @@ window.addEventListener("load", function () {
   }
   //collection mobile
   var swiper = new Swiper(".collec-swiper", {
-    slidesPerView: 1.15,
-    spaceBetween: 30,
+    slidesPerView: 1.05,
+    spaceBetween: 10,
     // loop: true,
     pagination: {
       el: ".swiper-pagination",
