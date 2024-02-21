@@ -180,21 +180,18 @@
     /* padding: 20px; */
     background-color: #fff;
     opacity: 0;
-    transition: left 0.5s;
+    transition: left 0.5s ease-in-out;
   }
   .mobile-menu.active {
     left: 0;
     opacity: 1;
   }
-  .mobile-menu.active > .mobile-nav {
-    background-color: #fff;
-  }
   .top-depth1 {
-    width: 80%;
-    min-width: 760px;
+    width: 95%;
     height: 30px;
-    margin: 76px auto;
-    padding: 20px;
+    margin: 85px auto;
+    margin-bottom: 0;
+    padding: 18px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -203,38 +200,34 @@
     border: 1px solid #333;
     opacity: 0.3;
   }
-  .top-depth1 > li{
+  .top-depth1 > li {
     position: relative;
     width: calc(100% / 3);
   }
-  .top-depth1 > li:not(:first-child):after{
+  .top-depth1 > li:not(:first-child):after {
     content: ""; /* 가상 요소에 내용을 추가 */
     position: absolute; /* 가상 요소를 부모 요소에 대해 절대 위치로 설정 */
-    top: 2px; /* 선의 세로 위치를 조절 */
-    left: 0; /* 선의 가로 위치를 조절 */
-    height: 30px; /* 가로선이 헤더의 전체 너비를 가지도록 설정 */
+    top: 5px; /* 선의 세로 위치를 조절 */
+    left: 2px; /* 선의 가로 위치를 조절 */
+    height: 21px; /* 가로선이 헤더의 전체 너비를 가지도록 설정 */
     width: 1px; /* 선의 높이(두께)를 조절 */
-    background-color: #333; /* 선의 색상을 지정 */
+    background-color: #5c5c5c; /* 선의 색상을 지정 */
     opacity: 1;
   }
-  .top-depth1 > li > a > img:nth-of-type(odd) {
+  .top-depth1 > li > a > img {
     filter: brightness(0.1);
   }
   .top-depth1 > li > a > img {
-    width: 30px;
-    height: 30px;
-    padding-bottom: 5px;
+    width: 25px;
+    height: 25px;
+    margin: 0 9px 5px 0;
     object-fit: cover;
     vertical-align: middle;
   }
   .top-depth1 .top-mb-txt {
-    font-size: 2.1rem;
+    font-size: 1.7rem;
     line-height: 30px;
     color: #333;
-  }
-  .cart{
-    top: 0;
-    left: 38%;
   }
   .left-depth1-mb {
     margin-top: 120px;
@@ -254,16 +247,19 @@
     background-color: #456dae; /* 선의 색상을 지정 */
     opacity: 0.2;
   }
-  .left-depth1-mb > li > a::before {
-    content: ""; /* 가상 요소에 내용을 추가 */
+  .chevron {
     position: absolute; /* 가상 요소를 부모 요소에 대해 절대 위치로 설정 */
-    top: 50%; /* 선의 세로 위치를 조절 */
-    transform: translateY(-50%);
-    right: 0; /* 선의 가로 위치를 조절 */
+    top: 30px; /* 선의 세로 위치를 조절 */
+    right: 5%; /* 선의 가로 위치를 조절 */
     height: 18px; /* 가로선이 헤더의 전체 너비를 가지도록 설정 */
     width: 18px; /* 선의 높이(두께)를 조절 */
     background: url("../images/chevron_down.svg") no-repeat center / cover; /* 선의 색상을 지정 */
     opacity: 0.5;
+    transform: rotate(0deg);
+    transition: all 0.3s;
+  }
+  .chevron.ani {
+    transform: rotate(180deg);
   }
 
   .left-depth1-mb li a {
@@ -307,9 +303,35 @@
     font-size: 1.8rem;
     opacity: 0.7;
   }
+  .find-shop-div {
+    margin: 20px auto;
+    text-align: center;
+  }
+  .find-shop-img {
+    position: absolute;
+    top: 50%;
+    transform: translate(-40%, -50%);
+    left: 40%;
+    width: 14px;
+    height: 19px;
+    background: url("../images/btn_store_mo.svg") no-repeat center / contain;
+  }
+  .find-shop {
+    position: relative;
+    width: 96%;
+    padding: 20px 0;
+    border: 0;
+    text-align: center;
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+    background-color: #456dae;
+  }
   /* about */
   .about-repose {
     height: 100vh;
+    width: 100%;
+    min-width: unset;
   }
   .about-repose .inner {
     width: 80%;
@@ -318,7 +340,6 @@
     position: relative;
     width: 100%;
     height: 80%;
-    padding-top: 40px;
     padding-bottom: 190px;
   }
   .about_slider .swiper-wrapper {
@@ -331,7 +352,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    opacity: 1;
+    opacity: 1 !important;
   }
   .info-left {
     position: absolute;
@@ -635,6 +656,58 @@
     font-size: 20px;
     margin: 20px;
     color: #fff;
+  }
+}
+@media all and (max-width: 980px) {
+  .vs-bg1 {
+    width: 100%;
+    background: url("../images/main_visual_mobile.png") no-repeat center / cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .vs-bg2 {
+    width: 100%;
+    background: url("../images/bespoke_event_mobile-01.png") no-repeat center /
+      cover;
+  }
+  .visual-box-text {
+    position: absolute;
+    top: 60%;
+    left: 13%;
+  }
+  .mainScrollBar
+    .mainScrollBar.swiper-horizontal
+    > .mainScrollBar.swiper-scrollbar,
+  .mainScrollBar.swiper-scrollbar.swiper-scrollbar-horizontal {
+    width: 97%;
+    height: 2px;
+    position: absolute;
+    /* 영역 값 수정 */
+    top: 90%;
+    left: 1.2%;
+    margin: 0 auto;
+  }
+  .mpn-box {
+    position: absolute;
+    top: 90%;
+    left: 60%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    /* background-color: #e93737; */
+    z-index: 99999;
+  }
+  /* about */
+  .about-repose .inner {
+    width: 100%;
+    height: 85vh;
+  }
+  .about_slider .img-box img {
+    width: 100%;
+    object-fit: cover;
   }
 }
 @media all and (max-width: 942px) {
