@@ -179,7 +179,7 @@ body.active {
   position: absolute;
   top: 48%;
   transform: translateY(-50%);
-  right: 50px;
+  right: 20px;
   width: 30px;
   height: 22px;
   background-color: transparent;
