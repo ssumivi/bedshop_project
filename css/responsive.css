@@ -1243,6 +1243,9 @@
     left: 5%;
     top: 58%;
   }
+  .about-repose{
+    height: 80vh;
+  }
   .about-repose .inner {
     height: 195vw;
     padding-top: 15%;
