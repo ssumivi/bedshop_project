@@ -124,3 +124,103 @@ body {
   filter: brightness(0.1);
   z-index: -1;
 }
+/* 채은영역 */
+.edgar-flush-wrap{}
+.edgar-flush-img{}
+.edgar-flush-right{
+    width: 609px;
+    height: 1250.58px;
+}
+.edgar-flush-right > p{
+    font-size: 36px;
+    font-weight: bold;
+}
+.edgar-right{
+
+}
+.edgar-right li{
+    font-size: 14px;
+    position: relative;
+    list-style: none;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 2;
+    
+}
+.money{
+    color: rgba(0, 0, 0, 0.4);
+    text-decoration: line-through ;
+    font-size: 16px;
+    padding-left: 30px;
+}
+.money2{
+    font-size: 22px;
+    padding-left: 30px;
+
+}
+.num{
+    color: #465dae;
+    padding-left: 10px;
+
+}
+.coin3{
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 30px;
+
+}
+.span46000{
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 16px;
+    padding-left: 10px;
+
+}
+.POOOOGHY{
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 30px;
+
+}
+.moo{
+    font-size: 16px;
+    padding-left: 30px;
+
+}
+.service2{
+    font-size: 16px;
+    padding-left: 30px;
+
+
+}
+.ds{
+    color: black;
+    padding-left: 30px;
+
+}
+.asas{
+    position: absolute;
+    width: 40px;
+    height: 22px;
+    margin-top: 3px;
+    left: 0;
+}
+.as{
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    transform: rotate(270deg);
+    margin-top: 6px;
+    margin-left: 60px;
+}
+.cpon{
+    position: absolute;
+display: flex;
+    background-color:rgba(3, 46, 138, 0.1);
+    width: 38%;
+   right: 0;
+}
+.cpon a span{
+margin-left: 50px;
+}
+.f{
+    display: flex;
+}
