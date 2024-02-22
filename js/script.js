@@ -52,32 +52,37 @@ window.addEventListener("load", function () {
 
   var leftDepth1MbItems = document.querySelectorAll(".left-depth1-mb > li");
 
-leftDepth1MbItems.forEach(function (item) {
-  item.addEventListener("click", function () {
-    var leftDepth2Mb = this.querySelector(".left-depth2-mb");
-    var allDepth2Mb = document.querySelectorAll(".left-depth2-mb");
-    var mbAni = this.querySelector(".chevron"); // 클릭된 li에 속한 chevron 요소만 선택
+  leftDepth1MbItems.forEach(function (item) {
+    item.addEventListener("click", function () {
+      var leftDepth2Mb = this.querySelector(".left-depth2-mb");
+      var allDepth2Mb = document.querySelectorAll(".left-depth2-mb");
+      var mbAni = this.querySelector(".chevron"); // 클릭된 li에 속한 chevron 요소만 선택
 
-    allDepth2Mb.forEach(function (depth2Item) {
-      if (depth2Item !== leftDepth2Mb && depth2Item.classList.contains("show")) {
-        depth2Item.classList.remove("show");
-        // 열려있는 메뉴의 애니메이션 클래스도 제거
-        depth2Item.parentElement.querySelector(".chevron").classList.remove("ani");
+      allDepth2Mb.forEach(function (depth2Item) {
+        if (
+          depth2Item !== leftDepth2Mb &&
+          depth2Item.classList.contains("show")
+        ) {
+          depth2Item.classList.remove("show");
+          // 열려있는 메뉴의 애니메이션 클래스도 제거
+          depth2Item.parentElement
+            .querySelector(".chevron")
+            .classList.remove("ani");
+        }
+      });
+
+      if (leftDepth2Mb) {
+        leftDepth2Mb.classList.toggle("show");
+        mbAni.classList.toggle("ani"); // 클릭된 li에 속한 chevron 요소에만 애니메이션 클래스 추가
+        // 화살표 상태를 로컬 스토리지에 저장
+        if (mbAni.classList.contains("ani")) {
+          localStorage.setItem("arrowState", "flipped");
+        } else {
+          localStorage.removeItem("arrowState");
+        }
       }
     });
-
-    if (leftDepth2Mb) {
-      leftDepth2Mb.classList.toggle("show");
-      mbAni.classList.toggle("ani"); // 클릭된 li에 속한 chevron 요소에만 애니메이션 클래스 추가
-      // 화살표 상태를 로컬 스토리지에 저장
-      if (mbAni.classList.contains("ani")) {
-        localStorage.setItem("arrowState", "flipped");
-      } else {
-        localStorage.removeItem("arrowState");
-      }
-    }
   });
-});
   //aos 추가
   AOS.init();
   //visual slide
@@ -107,21 +112,20 @@ leftDepth1MbItems.forEach(function (item) {
 
   function initSwiper(effect) {
     if (aboutSlider !== null) {
-        aboutSlider.destroy(); // 기존 슬라이더가 존재하면 파괴
-    }
-    
-    let slidesPerViewValue = 1; // 슬라이드 당 보여질 개수 기본값
-    let spaceBetweenValue = 20; // 슬라이드 사이의 간격 기본값
-    
-    if (ww < 1150) {
-        slidesPerViewValue = 1.2;
-        spaceBetweenValue = 10; // 1150px 미만일 때 1.2개의 슬라이드를 보여줌
-    } 
-    if (ww < 980) {
-        slidesPerViewValue = 1.1; // 980px 미만일 때 1.1개의 슬라이드를 보여줌
-        spaceBetweenValue = 10; // 980px 미만일 때 슬라이드 사이의 간격을 10px로 설정
+      aboutSlider.destroy(); // 기존 슬라이더가 존재하면 파괴
     }
 
+    let slidesPerViewValue = 1; // 슬라이드 당 보여질 개수 기본값
+    let spaceBetweenValue = 20; // 슬라이드 사이의 간격 기본값
+
+    if (ww < 1150) {
+      slidesPerViewValue = 1.2;
+      spaceBetweenValue = 10; // 1150px 미만일 때 1.2개의 슬라이드를 보여줌
+    }
+    if (ww < 980) {
+      slidesPerViewValue = 1.1; // 980px 미만일 때 1.1개의 슬라이드를 보여줌
+      spaceBetweenValue = 10; // 980px 미만일 때 슬라이드 사이의 간격을 10px로 설정
+    }
 
     aboutSlider = new Swiper(".about_slider", {
       fadeEffect: { crossFade: true },
@@ -281,31 +285,5 @@ leftDepth1MbItems.forEach(function (item) {
     // 모달이 닫힐 때는 스크롤을 다시 활성화
     controlScroll(false);
   });
-  // gotop btn
-  const goTop = this.document.querySelector(".top-popup");
-  goTop.addEventListener("click", function () {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  });
-  let footer = this.document.querySelector(".footer");
-  let footerY = footer.offsetTop;
-  let waypoint_service = new Waypoint({
-    element: document.querySelector(".service"),
-    handler: function (direction) {
-      if (direction === "down") {
-        goTop.classList.add("active");
-      } else {
-        goTop.classList.remove("active");
-      }
-    },
-    offset: "80%",
-  });
-  //business modal
-  const businessModal = document.querySelector(".business-modal");
-  businessModal.addEventListener("click", function () {
-    businessModal.style.display = "none";
-  });
-
+  
 });

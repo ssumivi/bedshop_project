@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="css/reset.css" />
     <!-- Link Swiper's CSS -->
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-    />
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -29,9 +29,10 @@
     <!-- <script src="js/prefixfree.min.js"></script> -->
     <script src="js/respond.min.js"></script>
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/mobile.js"></script>
+    <!-- <script src="js/mobile.js"></script> -->
+    <script src="js/shop.js"></script>
     <!-- aos -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   </head>
@@ -46,7 +47,7 @@
           <span>EDGAR II Plush(에드가 2 플러쉬)SS</span>
           <span class="bold">0원</span>
         </li>
-        <li class="picker-li"><img src="images/pick.svg" alt="찜버튼" class="picker"/></li>
+        <li class="picker-li"><img src="images/heart.png" alt="찜버튼" class="picker"/></li>
         <li><a href="#">장바구니</a></li>
         <li class="buynow"><a href="#">바로구매</a></li>
       </ul>
@@ -221,68 +222,107 @@
           </ul>
         </nav>
       </div>
+      </header>
       <!-- 채은영역 -->
       <!-- 에드가플러쉬 구매부분 -->
-      <div class="edgar-flush-wrap">
-        <div class="edgar-flush-img">
-          <img src="images/edgar1.jpg" alt="침대">
-          <img src="images/edgar2.jpg" alt="침대">
-          <img src="images/edgar3.jpg" alt="침대">
-          <img src="images/edgar4.jpg" alt="침대">
+    <section class="shopping">
+      <div class="inner">
+        <div class="sp-swiper-control">
+        <div class="swiper sw-shopping">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/edgar1.jpg" alt="상세이미지1">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/edgar2.jpg" alt="상세이미지2">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/edgar3.jpg" alt="상세이미지3">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/edgar4.jpg" alt="상세이미지4">
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
-        <div class="edgar-flush-right">
-        <P>Edgar ll Plush(에드가 2 플러쉬) SS</P>
-        <ul class="edgar-right">
-          <li>소비자가<span class="money">2,590,000</span></li>
-          <li>판매가<span class="money2">1,554,000<span class="num">40%</span></span></li>
-          <hr>
-          <li>마일리지<span class="coin3">3% 적립</span><span class="span46000">46,000원 적립예상</span></li>
-          <li>상품코드<span class="POOOOGHY">POOOOGHY</span></li>
-          <li>배송방법<span class="moo">직접배송</span></li>
-          <li class="f">추가혜택<span class="service2">무이자혜택</span><span class="service2">결제혜택</span>
-            <div class="cpon">
-            <a href="#" class="ds"><img src="images/btn_coupon.svg" alt="cupon" class="asas"><span>쿠폰 다운로드</span><img src="images/chevron_down.svg" alt="#" class="as"></a></li>
-            <hr>
-          <li>사이즈<span class="option3">-[필수]옵션을 선택해 주세요-i <img src="images/chevron_down.svg" alt="#"></span></li>
-          <li class="option2"></li>
-          <li>추가상품</li>
-          <img src="images/chevron_down.svg" alt="#">
-        </ul>
-      </div>
-        <div class="robert">
-          <img src="images/robert.jpg" alt="1">
-          <p>Robert ll(로버트 하단파운데이션)<span>331,500원</span></p>
-          <p>사이즈</p>
-          
-          
-            <p>-[필수] 옵션을 선택해 주세요- <img src="images/chevron_down.svg" alt=","></p>
-            <ul>
-              <li>슈퍼싱글(SS)</li>
-            <li>퀸(Q)</li>
-            <li>킹(KI)</li>
-            <li>칼킹(CK)</li>
-            <li>레귤러킹(RK)</li>
+        </div>
+        <div class="sp-right">
+          <h1>Edgar II Plush(에드가 2 플러쉬) SS</h1>
+          <ul class="sp-detail">
+            <li>소비자가 <span class="space"><strike>2,590,000원</strike></span></li>
+            <li>소비자가 <span class="price space">1,554,000원</span><span class="dc">40%</span></li>
+            <li><span class="sp-line"></span></li>
+            <li>마일리지 <span class="space point">3% 적립</span> <span class="gray">46,000원 적립 예상</span></li>
+            <li>상품코드 <span class="space"><b>P0000GHY</b></span></li>
+            <li>배송방법 <span class="space">직접배송</span> <span class="info-icon">i</span></li>
+            <li>
+              추가혜택 <span class="space">무이자혜택</span><span class="info-icon">i</span> 
+              <span class="space">결제혜택</span><span class="info-icon">i</span>
+              <div class="coupon"> 
+                <a href="#">
+              <img src="images/btn_coupon.svg" alt="쿠폰이미지"> <span>쿠폰 다운로드</span> <img src="images/chevron_down.svg" alt="화살표" class="chevron_down">
+              </a>
+            </div>
+          </li>
+            <li><span class="sp-line"></span></li>
           </ul>
-          <p>발통높이</p>
-          <p>-[필수] 옵션을 선택해 주세요- <img src="images/chevron_down.svg" alt=","></p>
-        </div>
-        <div class="cash">
-          <div class="cash2">
-          <p>총 상품금액(수량):</p>
-          <span>0원 <span class="0">(0개)</span></span>
-        </div>
-        <div class="cash3">
-          <img src="images/heart.png" alt="heart">
-          <p>장바구니</p>
-          <p>바로구매</p>
-        </div>
+          <div class="select-product">
+            <span>사이즈</span>
+            <select name="size" id="size">
+              <option value="required">-[필수]옵션을 선택해주세요-</option>
+              <option value="**" disabled linked_image>-----------------------</option>
+              <option value="SS">슈퍼싱글(SS)</option>
+              <option value="Q">퀸(Q) (+240,000원)</option>
+              <option value="KI">킹(KI) (+780,000원)</option>
+              <option value="CK">칼킹(CK) (+960,000원)</option>
+              <option value="RK">레귤러킹(CK) (+1,140,000원)</option>
+            </select>
+            <span>추가상품</span>
+            <div class="add-product">
+              <img src="images/robert.jpg" alt="추가상품이미지">
+              <ul class="add-pr-ul">
+                <li><span>Robert II(로버트 하단파운데이션)</span><span class="add-pr">331,500원</span></li>
+                <li>
+                  <span>사이즈</span>
+                  <select name="add-size" id="add-size">
+                    <option value="required">-[필수]옵션을 선택해주세요-</option>
+                    <option value="**" disabled linked_image>-----------------------</option>
+                    <option value="add-SS">슈퍼싱글(SS)</option>
+                    <option value="add-Q">퀸(Q) (+240,000원)</option>
+                    <option value="add-KI">킹(KI) (+780,000원)</option>
+                    <option value="add-CK">칼킹(CK) (+960,000원)</option>
+                    <option value="add-RK">레귤러킹(CK) (+1,140,000원)</option>
+                  </select>
+                </li>
+                <li>
+                  <span>발통 높이</span>
+                  <select name="add-size" id="add-size">
+                    <option value="required">-[필수]옵션을 선택해주세요-</option>
+                    <option value="**" disabled linked_image>-----------------------</option>
+                  </select>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="total">
+            <span>총 상품금액 (수량):</span>
+            <span class="total-pr">0원</span> <span class="total-length">(0개)</span>
+          </div>
+            <ul class="popup_nav">
+              <li class="picker-li"><img src="images/heart.png" alt="찜버튼" class="picker"/></li>
+              <li><a href="#">장바구니</a></li>
+              <li class="buynow"><a href="#">바로구매</a></li>
+            </ul>
         </div>
       </div>
-     
+    </section>
+    <section class="shopping-info">
+      <div class="inner">
+        <img src="images/plush-info1-01.png" alt="상품디테일">
       </div>
-    </header>
+    </section>
      <!-- footer -->
-    <!-- <div class="footer-wrap">
+    <div class="footer-wrap">
         <div class="footer-inner">
           <div class="footer-logo">
             <img src="images/repose_logo.png" alt="logo" />
@@ -367,6 +407,7 @@
             <img src="images/footer-bt-img.png" alt="" />
           </div>
         </div>
-      </div> -->
+      </div>
+    </div>
   </body>
 </html>
