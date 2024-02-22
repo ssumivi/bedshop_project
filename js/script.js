@@ -52,30 +52,32 @@ window.addEventListener("load", function () {
 
   var leftDepth1MbItems = document.querySelectorAll(".left-depth1-mb > li");
 
-  leftDepth1MbItems.forEach(function (item) {
-    item.addEventListener("click", function () {
-      var leftDepth2Mb = this.querySelector(".left-depth2-mb");
-      var allDepth2Mb = document.querySelectorAll(".left-depth2-mb");
-      var mbAni = this.querySelector(".chevron"); // 클릭된 li에 속한 chevron 요소만 선택
+leftDepth1MbItems.forEach(function (item) {
+  item.addEventListener("click", function () {
+    var leftDepth2Mb = this.querySelector(".left-depth2-mb");
+    var allDepth2Mb = document.querySelectorAll(".left-depth2-mb");
+    var mbAni = this.querySelector(".chevron"); // 클릭된 li에 속한 chevron 요소만 선택
 
-      allDepth2Mb.forEach(function (depth2Item) {
-        if (depth2Item !== leftDepth2Mb) {
-          depth2Item.classList.remove("show");
-        }
-      });
-
-      if (leftDepth2Mb) {
-        leftDepth2Mb.classList.toggle("show");
-        mbAni.classList.toggle("ani"); // 클릭된 li에 속한 chevron 요소에만 애니메이션 클래스 추가
-        // 화살표 상태를 로컬 스토리지에 저장
-        if (mbAni.classList.contains("ani")) {
-          localStorage.setItem("arrowState", "flipped");
-        } else {
-          localStorage.removeItem("arrowState");
-        }
+    allDepth2Mb.forEach(function (depth2Item) {
+      if (depth2Item !== leftDepth2Mb && depth2Item.classList.contains("show")) {
+        depth2Item.classList.remove("show");
+        // 열려있는 메뉴의 애니메이션 클래스도 제거
+        depth2Item.parentElement.querySelector(".chevron").classList.remove("ani");
       }
     });
+
+    if (leftDepth2Mb) {
+      leftDepth2Mb.classList.toggle("show");
+      mbAni.classList.toggle("ani"); // 클릭된 li에 속한 chevron 요소에만 애니메이션 클래스 추가
+      // 화살표 상태를 로컬 스토리지에 저장
+      if (mbAni.classList.contains("ani")) {
+        localStorage.setItem("arrowState", "flipped");
+      } else {
+        localStorage.removeItem("arrowState");
+      }
+    }
   });
+});
   //aos 추가
   AOS.init();
   //visual slide
@@ -224,7 +226,7 @@ window.addEventListener("load", function () {
       },
       1300: {
         slidesPerView: 4,
-        spaceBetween: 3,
+        spaceBetween: 15,
       },
     },
   });

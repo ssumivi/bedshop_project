@@ -763,7 +763,7 @@
   }
   .mpn-box {
     position: absolute;
-    top: 90%;
+    top: 87%;
     left: 60%;
     transform: translateX(-50%);
     display: flex;
@@ -1235,6 +1235,14 @@
   .visual {
     height: 72vh;
   }
+  .mainNbtn,
+  .mainPbtn{
+    display: none;
+  }
+  .visual-box-text{
+    left: 5%;
+    top: 58%;
+  }
   .about-repose .inner {
     height: 195vw;
     padding-top: 15%;
@@ -1253,7 +1261,7 @@
   }
   .info-left {
     position: absolute;
-    bottom: -50%;
+    bottom: -48%;
     width: 95%;
     text-align: left;
     padding-left: 0;
@@ -1399,7 +1407,7 @@
     max-width: 360px;
   }
   .about-repose .inner {
-    height: 175vw;
+    height: 180vw;
     padding-top: 15%;
   }
   .collection-mobile .collec-popup {
@@ -1449,6 +1457,22 @@
   }
 }
 @media all and (max-width: 393px) {
+  .about-repose .inner {
+    height: 193vw;
+    padding-top: 15%;
+  }
+  .about_slider {
+    padding-bottom: 70%;
+    padding-top: 20px;
+  }
+  .info-left {
+    position: absolute;
+    bottom: -58%;
+    width: 95%;
+    text-align: left;
+    padding-left: 0;
+    /* display: none; */
+  }
   .korea-companywrap dt {
     font-size: 8px;
     margin-right: 7px;
@@ -1472,6 +1496,24 @@
     font-size: 40px;
   }
 }
+@media all and (max-width: 390px){
+  .about-repose .inner {
+    height: 193vw;
+    padding-top: 15%;
+  }
+  .about_slider {
+    padding-bottom: 70%;
+    padding-top: 20px;
+  }
+  .info-left {
+    position: absolute;
+    bottom: -63%;
+    width: 95%;
+    text-align: left;
+    padding-left: 0;
+    /* display: none; */
+  }
+}
 @media all and (max-width: 359px) {
   .inner {
     max-width: 330px;
@@ -1486,12 +1528,12 @@
     background: url("../images/btn_store_mo.svg") no-repeat center / contain;
   }
   .about_slider {
-    padding-bottom: 62%;
+    padding-bottom: 68%;
     padding-top: 20px;
   }
   .info-left {
     position: absolute;
-    bottom: -60%;
+    bottom: -62%;
     width: 95%;
     text-align: left;
     padding-left: 0;
@@ -1518,9 +1560,17 @@
 }
 
 @media all and (max-width: 343px) {
+  .about-repose .inner {
+    height: 190vw;
+    padding-top: 15%;
+  }
+  .about_slider {
+    padding-bottom: 70%;
+    padding-top: 20px;
+  }
   .info-left {
     position: absolute;
-    bottom: -66%;
+    bottom: -75%;
     width: 95%;
     text-align: left;
     padding-left: 0;
@@ -1562,6 +1612,45 @@
   }
   .korea-Company-li li {
     font-size: 7px;
+  }
+}
+@media all and (max-width: 335px){
+  .about-repose .inner {
+    height: 198vw;
+    padding-top: 15%;
+  }
+  .about_slider {
+    padding-bottom: 73%;
+    padding-top: 20px;
+  }
+  .info-left {
+    position: absolute;
+    bottom: -70%;
+    width: 100%;
+    text-align: left;
+    padding-left: 0;
+    /* display: none; */
+  }
+}
+@media all and (max-width: 329px){
+  .inner {
+    max-width: 310px;
+  }
+  .about-repose .inner {
+    height: 198vw;
+    padding-top: 15%;
+  }
+  .about_slider {
+    padding-bottom: 73%;
+    padding-top: 20px;
+  }
+  .info-left {
+    position: absolute;
+    bottom: -70%;
+    width: 100%;
+    text-align: left;
+    padding-left: 0;
+    /* display: none; */
   }
 }
 @media all and (max-width: 320px) {
