@@ -7,12 +7,24 @@
 }
 body {
   font-family: "Pretendard-Regular";
-  height: 2000px;
 }
 .wrap {
   position: relative;
   width: 100%;
   height: 100%;
+}
+.header:hover::after {
+  opacity: 0;
+}
+.header::before {
+  content: ""; /* 가상 요소에 내용을 추가 */
+  position: absolute; /* 가상 요소를 부모 요소에 대해 절대 위치로 설정 */
+  top: 80px; /* 선의 세로 위치를 조절 */
+  left: 0; /* 선의 가로 위치를 조절 */
+  width: 100%; /* 가로선이 헤더의 전체 너비를 가지도록 설정 */
+  height: 1px; /* 선의 높이(두께)를 조절 */
+  background-color: #456dae; /* 선의 색상을 지정 */
+  opacity: 0.3;
 }
 /* 메뉴 네비게이션 */
 .top-popup {
@@ -21,8 +33,8 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 999;
-  opacity: 0;
-  visibility: hidden;
+  /* opacity: 0;
+  visibility: hidden; */
 }
 .top-popup.active {
   bottom: 20px;
@@ -57,6 +69,7 @@ body {
 .popup_nav li:nth-of-type(4) {
   width: 115px;
   text-align: center;
+  background-color: #fff;
 }
 .popup_nav li:nth-of-type(5) {
   width: 115px;
@@ -86,6 +99,7 @@ body {
   width: 550px;
   padding-left: 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 .product_parent span {
   font-size: 1.3rem;
@@ -105,14 +119,15 @@ body {
   font-weight: 600;
 }
 .popup_nav .picker-li {
-  border: 1px solid #456dae;
-}
-.picker {
   width: 45px;
   height: 45px;
+  text-align: center;
+  border: 1px solid #456dae;
+  background-color: #fff;
+}
+.picker {
   object-fit: cover;
   vertical-align: middle;
-  opacity: 0.4;
 }
 .header:hover .wrap {
   background-color: rgba(0, 0, 0, 0.1); /* 호버 시 어두운 배경색으로 변경 */
@@ -125,102 +140,127 @@ body {
   z-index: -1;
 }
 /* 채은영역 */
-.edgar-flush-wrap{}
-.edgar-flush-img{}
-.edgar-flush-right{
-    width: 609px;
-    height: 1250.58px;
+.shopping .inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 100px;
 }
-.edgar-flush-right > p{
-    font-size: 36px;
-    font-weight: bold;
+.sp-swiper-control {
+  width: 52%;
+  height: 83vh;
 }
-.edgar-right{
-
+.sw-shopping {
+  width: 100%;
+  height: 100%;
 }
-.edgar-right li{
-    font-size: 14px;
-    position: relative;
-    list-style: none;
-    color: rgba(0, 0, 0, 0.8);
-    line-height: 2;
-    
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
 }
-.money{
-    color: rgba(0, 0, 0, 0.4);
-    text-decoration: line-through ;
-    font-size: 16px;
-    padding-left: 30px;
+.swiper-slide {
+  width: 100%;
+  height: 100%;
 }
-.money2{
-    font-size: 22px;
-    padding-left: 30px;
-
+.sw-shopping .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.num{
-    color: #465dae;
-    padding-left: 10px;
-
+.sp-right {
+  width: 48%;
+  height: 100%;
 }
-.coin3{
-    font-size: 16px;
-    font-weight: 600;
-    padding-left: 30px;
-
+.sp-right h1 {
+  padding-top: 10px;
+  font-size: 3.2rem;
+  font-weight: 600;
 }
-.span46000{
-    color: rgba(0, 0, 0, 0.4);
-    font-size: 16px;
-    padding-left: 10px;
-
+.sp-detail {
+  padding-top: 30px;
+  font-size: 1.3rem;
+  color: #00000080;
 }
-.POOOOGHY{
-    font-size: 16px;
-    font-weight: 600;
-    padding-left: 30px;
-
+.sp-detail li {
+  position: relative;
+  padding: 10px 0;
 }
-.moo{
-    font-size: 16px;
-    padding-left: 30px;
-
+.sp-detail li .space {
+  padding-left: 30px;
+  font-size: 1.4rem;
+  color: #000;
 }
-.service2{
-    font-size: 16px;
-    padding-left: 30px;
-
-
+.price {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000;
 }
-.ds{
-    color: black;
-    padding-left: 30px;
-
+.dc {
+  padding-left: 10px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #456dae;
 }
-.asas{
-    position: absolute;
-    width: 40px;
-    height: 22px;
-    margin-top: 3px;
-    left: 0;
+.sp-line::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #e0e0e0;
 }
-.as{
-    position: absolute;
-    width: 10px;
-    height: 20px;
-    transform: rotate(270deg);
-    margin-top: 6px;
-    margin-left: 60px;
+.point {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #000;
 }
-.cpon{
-    position: absolute;
-display: flex;
-    background-color:rgba(3, 46, 138, 0.1);
-    width: 38%;
-   right: 0;
+.gray {
+  font-size: 1.4rem;
+  padding-left: 5px;
 }
-.cpon a span{
-margin-left: 50px;
+.space b {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #000;
 }
-.f{
-    display: flex;
+.info-icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-left: 5px;
+  line-height: 14px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #fff;
+  font-style: italic;
+  background-color: #456dae;
+  border-radius: 50%;
+}
+.sp-detail li img{
+  width: 36px;
+  height: 28px;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+.coupon{
+  display: inline-block;
+  width: 202px;
+  background-color: #e6e6e680;
+  margin: 10px;
+  cursor: pointer;
+}
+.sp-detail li .chevron_down{
+  width: 8px;
+  height: 8px;
+  margin: 0 10px;
+  object-fit: cover;
+  transform: rotate(270deg);
+}
+.sp-detail li .coupon a span{
+  color: #00000080;
+}
+.shopping-info .inner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
