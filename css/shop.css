@@ -1,1 +1,126 @@
 @charset "utf-8";
+/* 수민영역 */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Pretendard-Regular";
+  height: 2000px;
+}
+.wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* 메뉴 네비게이션 */
+.top-popup {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+}
+.top-popup.active {
+  bottom: 20px;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s;
+}
+.top-popup.active-footer {
+  bottom: 320px;
+}
+.top-popup .inner {
+  padding: 0 0 10px 0;
+}
+.popup_nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 45px;
+}
+.popup_nav li {
+  height: 100%;
+  font-size: 1.5rem;
+  line-height: 45px;
+  margin-right: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.popup_nav li a {
+  color: #333;
+}
+.popup_nav li:nth-of-type(4) {
+  width: 115px;
+  text-align: center;
+}
+.popup_nav li:nth-of-type(5) {
+  width: 115px;
+  background-color: #456dae;
+  text-align: center;
+}
+.popup_nav li:nth-of-type(5) a {
+  color: #fff;
+}
+.top {
+  width: 45px;
+  height: 100%;
+  background-color: #456dae;
+  color: #fff;
+  text-align: center;
+}
+.top-btn {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  vertical-align: middle;
+  transform: rotate(180deg);
+  filter: invert(100%) grayscale(100%);
+}
+.product_parent {
+  position: relative;
+  width: 550px;
+  padding-left: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.product_parent span {
+  font-size: 1.3rem;
+  padding-left: 10px;
+}
+.product_img {
+  width: 45px;
+  height: 40px;
+  object-fit: cover;
+  vertical-align: middle;
+}
+.bold {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10%;
+  font-weight: 600;
+}
+.popup_nav .picker-li {
+  border: 1px solid #456dae;
+}
+.picker {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  vertical-align: middle;
+  opacity: 0.4;
+}
+.header:hover .wrap {
+  background-color: rgba(0, 0, 0, 0.1); /* 호버 시 어두운 배경색으로 변경 */
+}
+.left-depth1 li a {
+  color: #000;
+}
+.right-depth1 img {
+  filter: brightness(0.1);
+  z-index: -1;
+}

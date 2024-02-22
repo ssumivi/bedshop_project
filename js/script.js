@@ -281,4 +281,31 @@ leftDepth1MbItems.forEach(function (item) {
     // 모달이 닫힐 때는 스크롤을 다시 활성화
     controlScroll(false);
   });
+  // gotop btn
+  const goTop = this.document.querySelector(".top-popup");
+  goTop.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+  let footer = this.document.querySelector(".footer");
+  let footerY = footer.offsetTop;
+  let waypoint_service = new Waypoint({
+    element: document.querySelector(".service"),
+    handler: function (direction) {
+      if (direction === "down") {
+        goTop.classList.add("active");
+      } else {
+        goTop.classList.remove("active");
+      }
+    },
+    offset: "80%",
+  });
+  //business modal
+  const businessModal = document.querySelector(".business-modal");
+  businessModal.addEventListener("click", function () {
+    businessModal.style.display = "none";
+  });
+
 });
