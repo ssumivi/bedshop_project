@@ -1,4 +1,12 @@
 window.addEventListener("load", function () {
+  var filter = "win16|win32|win64|mac|macintel";
+  if (navigator.platform) {
+    if (filter.indexOf(this.navigator.platform.toLowerCase()) >= 0) {
+      this.window.onresize = function () {
+        document.location.reload();
+      };
+    }
+  }
   const header = document.querySelector(".header");
   const mbt = this.document.querySelector(".mobile-btn");
   const rightDepth1 = this.document.querySelector(".right-depth1-img");
@@ -285,5 +293,4 @@ window.addEventListener("load", function () {
     // 모달이 닫힐 때는 스크롤을 다시 활성화
     controlScroll(false);
   });
-  
 });
