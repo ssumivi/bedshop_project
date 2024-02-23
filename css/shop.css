@@ -33,14 +33,10 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 999;
-  /* opacity: 0;
-  visibility: hidden; */
+  display: none;
 }
 .top-popup.active {
-  bottom: 20px;
-  visibility: visible;
-  opacity: 1;
-  transition: all 0.3s;
+  display: block; /* 스크롤 다운하면 나타남 */
 }
 .top-popup.active-footer {
   bottom: 320px;
@@ -79,6 +75,9 @@ body {
 .popup_nav li:nth-of-type(5) a {
   color: #fff;
 }
+.popup_nav .add-buy{
+  cursor: pointer;
+}
 .top {
   width: 45px;
   height: 100%;
@@ -93,6 +92,7 @@ body {
   vertical-align: middle;
   transform: rotate(180deg);
   filter: invert(100%) grayscale(100%);
+  cursor: pointer;
 }
 .product_parent {
   position: relative;
@@ -124,6 +124,7 @@ body {
   text-align: center;
   border: 1px solid #456dae;
   background-color: #fff;
+  cursor: pointer;
 }
 .picker {
   object-fit: cover;
