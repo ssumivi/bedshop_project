@@ -278,13 +278,14 @@
               <option value="CK">칼킹(CK) (+960,000원)</option>
               <option value="RK">레귤러킹(CK) (+1,140,000원)</option>
             </select>
-            <span>추가상품</span>
+            <span class="add-sangpoom">추가상품</span>
             <div class="add-product">
-              <img src="images/robert.jpg" alt="추가상품이미지">
+              <div class="rovert">
+              <img src="images/robert.jpg" alt="추가상품이미지"></div>
               <ul class="add-pr-ul">
-                <li><span>Robert II(로버트 하단파운데이션)</span><span class="add-pr">331,500원</span></li>
+                <li class="robort"><span >Robert II(로버트 하단파운데이션)</span><span class="add-pr" >331,500원</span></li>
                 <li>
-                  <span>사이즈</span>
+                  <span class="spansize">사이즈</span>
                   <select name="add-size" id="add-size">
                     <option value="required">-[필수]옵션을 선택해주세요-</option>
                     <option value="**" disabled linked_image>-----------------------</option>
@@ -296,7 +297,7 @@
                   </select>
                 </li>
                 <li>
-                  <span>발통 높이</span>
+                  <span class="spansize">발통 높이</span>
                   <select name="add-size" id="add-size">
                     <option value="required">-[필수]옵션을 선택해주세요-</option>
                     <option value="**" disabled linked_image>-----------------------</option>
@@ -306,14 +307,17 @@
             </div>
           </div>
           <div class="total">
-            <span>총 상품금액 (수량):</span>
-            <span class="total-pr">0원</span> <span class="total-length">(0개)</span>
-          </div>
+            <div id="add-prpr">
+            <span class="total-pri">총 상품금액 (수량):</span>
+            <p><span class="total-pr" >0원</span> <span class="total-length" id="add-prpr">(0개)</span></div></p>
+            
             <ul class="popup_nav">
               <li class="picker-li"><img src="images/heart.png" alt="찜버튼" class="picker"/></li>
               <li class="add-buy"><a href="#">장바구니</a></li>
               <li class="buynow"><a href="#">바로구매</a></li>
             </ul>
+          </div>
+           
         </div>
       </div>
     </section>
