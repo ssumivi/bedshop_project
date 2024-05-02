@@ -1,12 +1,12 @@
 window.addEventListener("load", function () {
-  var filter = "win16|win32|win64|mac|macintel";
-  if (navigator.platform) {
-    if (filter.indexOf(this.navigator.platform.toLowerCase()) >= 0) {
-      this.window.onresize = function () {
-        document.location.reload();
-      };
-    }
-  }
+  // var filter = "win16|win32|win64|mac|macintel";
+  // if (navigator.platform) {
+  //   if (filter.indexOf(this.navigator.platform.toLowerCase()) >= 0) {
+  //     this.window.onresize = function () {
+  //       document.location.reload();
+  //     };
+  //   }
+  // }
   const header = document.querySelector(".header");
   const mbt = this.document.querySelector(".mobile-btn");
   const rightDepth1 = this.document.querySelector(".right-depth1-img");
@@ -67,15 +67,10 @@ window.addEventListener("load", function () {
       var mbAni = this.querySelector(".chevron"); // 클릭된 li에 속한 chevron 요소만 선택
 
       allDepth2Mb.forEach(function (depth2Item) {
-        if (
-          depth2Item !== leftDepth2Mb &&
-          depth2Item.classList.contains("show")
-        ) {
+        if (depth2Item !== leftDepth2Mb && depth2Item.classList.contains("show")) {
           depth2Item.classList.remove("show");
           // 열려있는 메뉴의 애니메이션 클래스도 제거
-          depth2Item.parentElement
-            .querySelector(".chevron")
-            .classList.remove("ani");
+          depth2Item.parentElement.querySelector(".chevron").classList.remove("ani");
         }
       });
 
@@ -94,7 +89,7 @@ window.addEventListener("load", function () {
   //aos 추가
   AOS.init();
   //visual slide
-  var swiper = new Swiper(".mainVisual", {
+  let swiper = new Swiper(".mainVisual", {
     loop: true,
     autoplay: true,
     delay: 5000,
@@ -191,7 +186,7 @@ window.addEventListener("load", function () {
   });
 
   if (window.innerWidth <= 1150) {
-    var swiper = new Swiper(".mobile-collec", {
+    var swCollec = new Swiper(".mobile-collec", {
       slidesPerView: 3,
       spaceBetween: 30,
       pagination: {
@@ -201,7 +196,7 @@ window.addEventListener("load", function () {
     });
   }
   //collection mobile
-  var swiper = new Swiper(".collec-swiper", {
+  var swMbCollec = new Swiper(".collec-swiper", {
     slidesPerView: 1.05,
     spaceBetween: 10,
     // loop: true,
@@ -212,7 +207,7 @@ window.addEventListener("load", function () {
   });
 
   //repose product
-  var swiper = new Swiper(".repos-img", {
+  var swRepose = new Swiper(".repos-img", {
     loop: true,
     // slidesPerView: 4,
     spaceBetween: 7,
@@ -243,7 +238,7 @@ window.addEventListener("load", function () {
     },
   });
   //  insta
-  var swiper = new Swiper(".insta-img", {
+  var swInsta = new Swiper(".insta-img", {
     loop: true,
     autoplay: true,
     delay: 800,
