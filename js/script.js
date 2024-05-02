@@ -89,7 +89,7 @@ window.addEventListener("load", function () {
   //aos 추가
   AOS.init();
   //visual slide
-  let swiper = new Swiper(".mainVisual", {
+  let swVisual = new Swiper(".mainVisual", {
     loop: true,
     autoplay: true,
     delay: 5000,
